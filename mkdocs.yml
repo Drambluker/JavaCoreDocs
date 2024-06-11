@@ -1,1 +1,37 @@
-site_name: My Docs
+# Project information
+site_name: Java Core
+site_url: https://drambluker.github.io/JavaCoreDocs
+
+# Repository
+repo_url: https://github.com/Drambluker/JavaCoreDocs
+
+# Configuration
+theme:
+  name: material
+  language: ru
+  features:
+    - navigation.tabs
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+
+# Additional configuration
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Drambluker
