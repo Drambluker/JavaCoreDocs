@@ -1,0 +1,3118 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://drambluker.github.io/JavaCoreDocs/%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BA%D0%B8/3-%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D1%8B-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-%D0%BD%D0%B0-java/">
+      
+      
+        <link rel="prev" href="../2-%D1%81%D1%80%D0%B5%D0%B4%D0%B0-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-%D0%BD%D0%B0-java/">
+      
+      
+        <link rel="next" href="../4-%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%BD%D0%BE-%D0%BE%D1%80%D0%B8%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B5-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BD%D0%B0-java/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
+    
+    
+      
+        <title>Основы программирования на Java - Java Core</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#java" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Java Core" class="md-header__button md-logo" aria-label="Java Core" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Java Core
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Основы программирования на Java
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Drambluker/JavaCoreDocs" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Главная
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../1-%D0%B2%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2-%D1%8F%D0%B7%D1%8B%D0%BA-java/" class="md-tabs__link">
+          
+  
+  Памятки
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Java Core" class="md-nav__button md-logo" aria-label="Java Core" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Java Core
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Drambluker/JavaCoreDocs" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Главная
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Памятки
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Памятки
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1-%D0%B2%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2-%D1%8F%D0%B7%D1%8B%D0%BA-java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Введение в язык Java
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2-%D1%81%D1%80%D0%B5%D0%B4%D0%B0-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-%D0%BD%D0%B0-java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Среда программирования на Java
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Основы программирования на Java
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Основы программирования на Java
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#java_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Простая программа на Java
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Комментирование кода
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Встроенные типы данных
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Встроенные типы данных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Целочисленные типы данных
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Числовые типы данных с плавающей точкой
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Символьный тип данных
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Логический тип данных
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Переменные и константы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Переменные и константы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Переменные
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Константы
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Операции
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Операции">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Арифметические операции
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Арифметические операции с присвоением
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Инкрементация и декрементация
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Условные выражения
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Условные выражения">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Операции сравнения
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Логические операции
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Таблицы истинности
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Дополнительные материалы
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Преобразование числовых типов
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Преобразование числовых типов">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Автоматическое преобразование
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Приведение типов
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Преобразования при операциях
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      Символьные строки
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Символьные строки">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      Подстроки
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      Сцепление строк
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      Принцип постоянства символьных строк
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      Проверка символьных строк на равенство
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      Построение символьных строк
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      Консольный ввод/вывод
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Консольный ввод/вывод">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      Вывод в консоль
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ввод с консоли
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      Файловый ввод/вывод
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      Управляющая логика
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Управляющая логика">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      Область видимости блоков
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      Условные операторы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Условные операторы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ifelse" class="md-nav__link">
+    <span class="md-ellipsis">
+      if/else
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      switch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      Тернарный оператор
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      Циклы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Циклы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for" class="md-nav__link">
+    <span class="md-ellipsis">
+      for
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dowhile" class="md-nav__link">
+    <span class="md-ellipsis">
+      do...while
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#while" class="md-nav__link">
+    <span class="md-ellipsis">
+      while
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#break-continue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Операторы прерывания логики управления программой (break и continue)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      Массивы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Массивы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      Длина массива
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      Многомерные массивы
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      Зубчатый массив
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-each" class="md-nav__link">
+    <span class="md-ellipsis">
+      Цикл for each
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      Перебор многомерных массивов в цикле
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      Методы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Методы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      Параметры методов
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Параметры методов">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      Параметры переменной длины
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return" class="md-nav__link">
+    <span class="md-ellipsis">
+      Оператор return
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Оператор return">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      Выход из метода
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      Перегрузка методов
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4-%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%BD%D0%BE-%D0%BE%D1%80%D0%B8%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B5-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BD%D0%B0-java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Объектно-ориентированное программирование
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#java_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Простая программа на Java
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Комментирование кода
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Встроенные типы данных
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Встроенные типы данных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Целочисленные типы данных
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Числовые типы данных с плавающей точкой
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Символьный тип данных
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Логический тип данных
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Переменные и константы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Переменные и константы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Переменные
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Константы
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Операции
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Операции">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Арифметические операции
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Арифметические операции с присвоением
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Инкрементация и декрементация
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Условные выражения
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Условные выражения">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Операции сравнения
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Логические операции
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Таблицы истинности
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Дополнительные материалы
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Преобразование числовых типов
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Преобразование числовых типов">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Автоматическое преобразование
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Приведение типов
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Преобразования при операциях
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      Символьные строки
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Символьные строки">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      Подстроки
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      Сцепление строк
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      Принцип постоянства символьных строк
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      Проверка символьных строк на равенство
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      Построение символьных строк
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      Консольный ввод/вывод
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Консольный ввод/вывод">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      Вывод в консоль
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ввод с консоли
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      Файловый ввод/вывод
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      Управляющая логика
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Управляющая логика">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      Область видимости блоков
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      Условные операторы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Условные операторы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ifelse" class="md-nav__link">
+    <span class="md-ellipsis">
+      if/else
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      switch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      Тернарный оператор
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      Циклы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Циклы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for" class="md-nav__link">
+    <span class="md-ellipsis">
+      for
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dowhile" class="md-nav__link">
+    <span class="md-ellipsis">
+      do...while
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#while" class="md-nav__link">
+    <span class="md-ellipsis">
+      while
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#break-continue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Операторы прерывания логики управления программой (break и continue)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      Массивы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Массивы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      Длина массива
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      Многомерные массивы
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      Зубчатый массив
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-each" class="md-nav__link">
+    <span class="md-ellipsis">
+      Цикл for each
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      Перебор многомерных массивов в цикле
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      Методы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Методы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      Параметры методов
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Параметры методов">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      Параметры переменной длины
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return" class="md-nav__link">
+    <span class="md-ellipsis">
+      Оператор return
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Оператор return">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      Выход из метода
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      Перегрузка методов
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="java">Основы программирования на Java</h1>
+<h2 id="java_1">Простая программа на Java</h2>
+<pre><code class="language-java">public class Sample
+{
+   public static void main(String[] args)
+   {
+      System.out.println(&quot;Hello!&quot;);
+      System.out.println(&quot;Welcome to Java!&quot;);
+   }
+}
+</code></pre>
+<p>Проанализируем исходный код класса <code>Sample</code>. При определении класса вначале идет модификатор доступа <code>public</code>, который указывает, что данный класс будет доступен всем, то есть его можно будет запустить из командной строки. Далее идет ключевое слово <code>class</code>, пока будем это считать неким контейнером, в котором реализована программная логика, определяющая порядок работы приложения. Классы являются стандартными блоками, из которых состоят все приложения, написанные на Java. Все, что имеется в программе на Java, должно находиться в пределах класса. Затем идёт название класса <code>Sample</code>.</p>
+<p>Файл, содержащий исходный текст, должен называться так же, как и открытый (<code>public</code>) класс, и иметь расширение файла <code>.java</code>. Таким образом, код рассматриваемого здесь класса следует разместить в файле <code>Sample.java</code>.</p>
+<p>Входной точкой в программу на языке Java является метод <code>main</code>, который определен в классе. Именно с него начинается выполнение программы. Он обязательно должен присутствовать в программе. При этом его заголовок может быть только таким:</p>
+<pre><code class="language-java">public static void main (String args[])
+</code></pre>
+<p><em>Следует обратить внимание на то, что в языке Java учитывается регистр букв. Так, если вы перепутаете их (например, наберете <code>Main</code> вместо <code>main</code>), рассматриваемая программа выполняться не будет.</em></p>
+<p>Вначале заголовка метода идет модификатор <code>public</code>, который указывает, что метод будет доступен извне (из командной строки и из других классов). Слово <code>static</code> указывает, что метод <code>main</code> - статический, а слово <code>void</code> - что он не возвращает никакого значения. Далее в скобках идут параметры метода - <code>String args[]</code> - это массив <code>args</code>, который хранит значения типа <code>String</code>, то есть строки. При запуске программы через этот массив можно передать в программу различные данные.</p>
+<p>Основным строительным блоком методов на языке Java являются инструкции. Каждая инструкция выполняет некоторое действие, например, вызовы других методов, объявление переменных и присвоение им значений. После завершения инструкции в Java ставится точка с запятой (<code>;</code>). Данный знак указывает компилятору на конец инструкции.</p>
+<p>После заголовка метода идет его блок кода, который содержит набор выполняемых инструкций. Он заключается в фигурные скобки, а инструкции помещаются между открывающей и закрывающей фигурными скобками:</p>
+<pre><code class="language-java">{
+    System.out.println(&quot;Hello!&quot;);
+    System.out.println(&quot;Welcome to Java!&quot;);
+}
+</code></pre>
+<p>В рассматриваемом примере кода при выполнении метода <code>main</code> в консоль выводятся текстовые строки. Для этой цели используется объект <code>System.out</code> и вызывается его метод <code>println</code>. Метод всегда отделяется от объекта точкой.</p>
+<h2 id="_1">Комментирование кода</h2>
+<p>Код программы может содержать комментарии. Комментарии позволяют понять смысл программы, что делают те или иные ее части. При компиляции комментарии игнорируются и не оказывают никакого влияния на работу приложения и на его размер.</p>
+<p>В Java есть два основных типа комментариев: однострочный и многострочный. Однострочный комментарий размещается на одной строке после двойного слеша <code>//</code>. А многострочный комментарий заключается между символами <code>/* текст комментария */</code>. Он может размещаться на нескольких строках. Например:</p>
+<pre><code class="language-java">/*
+    Многострочный комментарий
+
+    Объявление нового класса, который содержит код программы
+*/
+public class Sample { // начало объявления класса Sample
+
+    // определение метода main
+    public static void main(String[] args) { // объявление нового метода
+        System.out.println(&quot;Hello Java!&quot;); // вывод строки на консоль
+    } // конец объявления нового метода
+} // конец объявления класса Sample
+</code></pre>
+<h2 id="_2">Встроенные типы данных</h2>
+<p>Язык Java является строго типизированным. Это означает, что тип каждой переменной должен быть явно определен. При этом переменная может принимать только те значения, которые соответствуют ее типу. Если переменная представляет целочисленный тип, то она не может хранить дробные числа.</p>
+<h3 id="_3">Целочисленные типы данных</h3>
+<ul>
+<li><code>byte</code>: хранит целое число от <code>-128</code> до <code>127</code> и занимает 1 байт:</li>
+</ul>
+<pre><code class="language-java">byte a = 3;
+byte b = 8;
+</code></pre>
+<ul>
+<li><code>short</code>: хранит целое число от <code>-32768</code> до <code>32767</code> и занимает 2 байта:</li>
+</ul>
+<pre><code class="language-java">short a = 3;
+short b = 8;
+</code></pre>
+<ul>
+<li><code>int</code>: хранит целое число от <code>-2147483648</code> до <code>2147483647</code> (больше 2 млрд) и занимает 4 байта:</li>
+</ul>
+<pre><code class="language-java">int a = 4;
+int b = 9;
+</code></pre>
+<ul>
+<li><code>long</code>: хранит целое число от <code>–9223372036854775808</code> до <code>9223372036854775807</code> и занимает 8 байт:</li>
+</ul>
+<pre><code class="language-java">long a = 5L;
+long b = 10L;
+</code></pre>
+<p>Как правило, наиболее удобным считается тип <code>int</code>.</p>
+<h3 id="_4">Числовые типы данных с плавающей точкой</h3>
+<ul>
+<li><code>float</code>: хранит число с плавающей точкой от -3.40282347E+38F до 3.40282347E+38F (16-7 значащих десятичных цифр) и занимает 4 байта:</li>
+</ul>
+<pre><code class="language-java">float x = 8.5F;
+float y = 2.7F;
+</code></pre>
+<ul>
+<li><code>double</code>: хранит число с плавающей точкой от -1.7976931348623157E+308F до 1.7976931348623157E+308F (15 значащих десятичных цифр) и занимает 8 байт</li>
+</ul>
+<pre><code class="language-java">double x = 8.5;
+double y = 2.7;
+</code></pre>
+<p>В качестве разделителя целой и дробной части в дробных литералах используется точка.</p>
+<p>Для большинства приложений тип <code>double</code> считается более удобным.</p>
+<h3 id="_5">Символьный тип данных</h3>
+<ul>
+<li><code>char</code>: хранит одиночный символ в кодировке UTF-16 и занимает 2 байта, диапазон хранимых значений от 0 до 65535:</li>
+</ul>
+<pre><code class="language-java">char a = 'A';
+char b = 65; // символ 'A'
+</code></pre>
+<h3 id="_6">Логический тип данных</h3>
+<ul>
+<li><code>boolean</code>: хранит значение <code>true</code> (истина) или <code>false</code> (ложь):</li>
+</ul>
+<pre><code class="language-java">boolean isActive = false;
+boolean isAlive = true;
+</code></pre>
+<h2 id="_7">Переменные и константы</h2>
+<p>Переменные служат в Java для хранения значений. А константы являются переменными, значения которых не изменяются.</p>
+<h3 id="_8">Переменные</h3>
+<p>Переменная представляет именованную область памяти, которая хранит значение определенного типа. Каждая переменная имеет тип, имя и значение. Тип определяет, какую информацию может хранить переменная.</p>
+<p>Пример объявления переменной:</p>
+<pre><code class="language-java">int x;
+</code></pre>
+<p>В этом выражении объявляется переменная <code>x</code> типа <code>int</code>. То есть <code>x</code> будет хранить некоторое число не больше 4 байт.</p>
+<p>Объявив переменную, можно присвоить ей значение:</p>
+<pre><code class="language-java">int x;  // объявление переменной
+x = 10; // присвоение значения
+</code></pre>
+<p>Также можно присвоить значение переменной при ее объявлении. Этот процесс называется инициализацией:</p>
+<pre><code class="language-java">int x = 10;            // объявление и инициализация переменной
+System.out.println(x); // 10
+</code></pre>
+<p>Если не присвоить переменной значение до ее использования, то можно получить ошибку, например, в следующем случае:</p>
+<pre><code class="language-java">int x;
+System.out.println(x);
+</code></pre>
+<p>Отличительной особенностью переменных является то, что мы можем в процессе работы программы изменять их значения:</p>
+<pre><code class="language-java">int x = 10;
+System.out.println(x); // 10
+x = 25;
+System.out.println(x); // 25
+</code></pre>
+<h3 id="_9">Константы</h3>
+<p>Кроме переменных, в Java для хранения данных можно использовать константы. В отличие от переменных константам можно присвоить значение только один раз. Константа объявляется также, как и переменная, только вначале идет ключевое слово <code>final</code>:</p>
+<pre><code class="language-java">final double PI = 3.14;
+System.out.println(PI); // 3.14
+// PI = 3.1415;         // так уже нельзя написать, так как PI - константа
+</code></pre>
+<p>Константы позволяют задать такие переменные, которые не должны больше изменяться. Например, если есть переменная для хранения числа pi, то можно объявить ее константой, так как ее значение постоянно.</p>
+<h2 id="_10">Операции</h2>
+<h3 id="_11">Арифметические операции</h3>
+<ul>
+<li><code>+</code> - операция сложения двух чисел:</li>
+</ul>
+<pre><code class="language-java">int a = 10;
+int b = 7;
+int c = a + b; // 17
+int d = 4 + b; // 11
+</code></pre>
+<ul>
+<li><code>-</code> - операция вычитания двух чисел:</li>
+</ul>
+<pre><code class="language-java">int a = 10;
+int b = 7;
+int c = a - b; // 3
+int d = 4 - a; // -6
+</code></pre>
+<ul>
+<li><code>*</code> - операция умножения двух чисел</li>
+</ul>
+<pre><code class="language-java">int a = 10;
+int b = 7;
+int c = a * b; // 70
+int d = b * 5; // 35
+</code></pre>
+<ul>
+<li><code>/</code> - операция деления двух чисел:</li>
+</ul>
+<pre><code class="language-java">int a = 20;
+int b = 5;
+int c = a / b;         // 4
+double d = 22.5 / 4.5; // 5.0
+</code></pre>
+<p>При делении стоит учитывать, что если в операции участвуют два целых числа, то результат деления будет округляться до целого числа, даже если результат присваивается переменной <code>float</code> или <code>double</code>:</p>
+<pre><code class="language-java">double k = 10 / 4; // 2
+System.out.println(k);
+</code></pre>
+<p>Чтобы результат представлял число с плавающей точкой, один из операндов также должен представлять число с плавающей точкой:</p>
+<pre><code class="language-java">double k = 10.0 / 4; // 2.5
+System.out.println(k);
+</code></pre>
+<ul>
+<li><code>%</code> - получение остатка от деления двух чисел:</li>
+</ul>
+<pre><code class="language-java">int a = 33;
+int b = 5;
+int c = a % b;  // 3
+int d = 22 % 4; // 2 (22 - 4 * 5 = 2)
+</code></pre>
+<h3 id="_12">Арифметические операции с присвоением</h3>
+<p>В языке Java предусмотрена сокращенная запись арифметических операций с присовением.</p>
+<ul>
+<li><code>+=</code></li>
+</ul>
+<pre><code class="language-java">c += b;    // переменной &quot;c&quot; присваивается результат сложения &quot;c&quot; и &quot;b&quot;
+с = с + b; // равнозначная инструкция
+</code></pre>
+<ul>
+<li><code>-=</code></li>
+</ul>
+<pre><code class="language-java">c -= b;    // переменной &quot;c&quot; присваивается результат вычитания &quot;b&quot; из &quot;c&quot;
+с = с - b; // равнозначная инструкция
+</code></pre>
+<ul>
+<li><code>*=</code></li>
+</ul>
+<pre><code class="language-java">c *= b;    // переменной &quot;c&quot; присваивается результат произведения &quot;c&quot; и &quot;b&quot;
+с = с * b; // равнозначная инструкция
+</code></pre>
+<ul>
+<li><code>/=</code></li>
+</ul>
+<pre><code class="language-java">c /= b;    // переменной &quot;c&quot; присваивается результат деления &quot;c&quot; на &quot;b&quot;
+с = с / b; // равнозначная инструкция
+</code></pre>
+<ul>
+<li><code>%=</code></li>
+</ul>
+<pre><code class="language-java">c %= b;    // переменной &quot;c&quot; присваивается остаток от деления &quot;c&quot; на &quot;b&quot;
+с = с % b; // равнозначная инструкция
+</code></pre>
+<h3 id="_13">Инкрементация и декрементация</h3>
+<p>Инкрементация - увеличение значения переменной на единицу.</p>
+<p>Декрементация - уменьшение значения переменной на единицу.</p>
+<p>Существуют два вида операций инкремента и декремента. Оба этих вида операций изменяют значение переменной на единицу. Их отличие проявляется только тогда, когда эти операции присутствуют в присваивании. В префиксной форме сначала изменяется значение переменной, и только лишь потом присваивается, а в постфиксной форме присваивается прежнее значение этой переменной, и лишь после данной операции оно изменяется на единицу.</p>
+<p><em>Операции <code>++</code> и <code>--</code> изменяют значение переменной, поэтому их нельзя применять к самим числам. Например, выражение <code>4++</code> считается недопустимым.</em></p>
+<ul>
+<li><code>++</code> (префиксный инкремент)</li>
+</ul>
+<p>Предполагает увеличение переменной на единицу, например, <code>z = ++y</code> (вначале значение переменной <code>y</code> увеличивается на <code>1</code>, а затем ее значение присваивается переменной <code>z</code>)</p>
+<pre><code class="language-java">int a = 8;
+int b = ++a;           // Равнозначные инструкции: b = a + 1;
+System.out.println(a); // 9
+System.out.println(b); // 9
+</code></pre>
+<ul>
+<li><code>++</code> (постфиксный инкремент)</li>
+</ul>
+<p>Также представляет увеличение переменной на единицу, например, <code>z = y++</code> (вначале значение переменной <code>y</code> присваивается переменной <code>z</code>, а потом значение переменной <code>y</code> увеличивается на <code>1</code>)</p>
+<pre><code class="language-java">int a = 8;
+int b = a++;           // Равнозначные инструкции: b = a; a = a + 1;
+System.out.println(a); // 9
+System.out.println(b); // 8
+</code></pre>
+<ul>
+<li><code>--</code> (префиксный декремент)</li>
+</ul>
+<p>Уменьшение переменной на единицу, например, <code>z = --y</code> (вначале значение переменной <code>y</code> уменьшается на <code>1</code>, а потом ее значение присваивается переменной <code>z</code>)</p>
+<pre><code class="language-java">int a = 8;
+int b = --a;           // Равнозначные инструкции: b = a - 1;
+System.out.println(a); // 7
+System.out.println(b); // 7
+</code></pre>
+<ul>
+<li><code>--</code> (постфиксный декремент)</li>
+</ul>
+<p><code>z = y--</code> (сначала значение переменной <code>y</code> присваивается переменной <code>z</code>, а затем значение переменной <code>y</code> уменьшается на <code>1</code>)</p>
+<pre><code class="language-java">int a = 8;
+int b = a--;           // Равнозначные инструкции: b = a; a = a - 1;
+System.out.println(a); // 7
+System.out.println(b); // 8
+</code></pre>
+<h3 id="_14">Условные выражения</h3>
+<p>Условные выражения представляют собой некоторое условие и возвращают значение типа <code>boolean</code>, то есть значение <code>true</code> (если условие истинно), или значение <code>false</code> (если условие ложно).</p>
+<h4 id="_15">Операции сравнения</h4>
+<p>В операциях сравнения сравниваются два операнда, и возвращается значение типа <code>boolean</code> - <code>true</code>, если выражение верно, и <code>false</code>, если выражение неверно.</p>
+<ul>
+<li><code>==</code> - сравнивает два операнда на равенство и возвращает <code>true</code>, если операнды равны, и <code>false</code>, если операнды не равны</li>
+</ul>
+<pre><code class="language-java">int a = 10;
+int b = 4;
+boolean c = a == b;  // false
+boolean d = a == 10; // true
+</code></pre>
+<ul>
+<li><code>!=</code> - сравнивает два операнда и возвращает <code>true</code>, если операнды НЕ равны, и <code>false</code>, если операнды равны</li>
+</ul>
+<pre><code class="language-java">int a = 10;
+int b = 4;
+boolean c = a != b;  // true
+boolean d = a != 10; // false
+</code></pre>
+<ul>
+<li><code>&lt;</code> (меньше чем) - возвращает <code>true</code>, если первый операнд меньше второго, иначе возвращает <code>false</code></li>
+</ul>
+<pre><code class="language-java">int a = 10;
+int b = 4;
+boolean c = a &lt; b; // false
+</code></pre>
+<ul>
+<li><code>&gt;</code> (больше чем) - возвращает <code>true</code>, если первый операнд больше второго, иначе возвращает <code>false</code></li>
+</ul>
+<pre><code class="language-java">int a = 10;
+int b = 4;
+boolean c = a &gt; b; // true
+</code></pre>
+<ul>
+<li><code>&gt;=</code> (больше или равно) - возвращает <code>true</code>, если первый операнд больше второго или равен второму, иначе возвращает <code>false</code></li>
+</ul>
+<pre><code class="language-java">boolean c = 10 &gt;= 10; // true
+boolean b = 10 &gt;= 4;  // true
+boolean d = 10 &gt;= 20; // false
+</code></pre>
+<ul>
+<li><code>&lt;=</code> (меньше или равно) - возвращает <code>true</code>, если первый операнд меньше второго или равен второму, иначе возвращает <code>false</code></li>
+</ul>
+<pre><code class="language-java">boolean c = 10 &lt;= 10; // true
+boolean b = 10 &lt;= 4;  // false
+boolean d = 10 &lt;= 20; // true
+</code></pre>
+<h4 id="_16">Логические операции</h4>
+<p>Также в Java есть логические операции, которые также представляют условие и возвращают <code>true</code> или false и обычно объединяют несколько операций сравнения. К логическим операциям относят следующие:</p>
+<ul>
+<li><code>|</code> (или)</li>
+</ul>
+<p><code>c = a | b;</code> (<code>c</code> равно <code>true</code>, если либо <code>a</code>, либо <code>b</code> (либо и <code>a</code>, и <code>b</code>) равны <code>true</code>, иначе <code>c</code> будет равно <code>false</code>)</p>
+<ul>
+<li><code>&amp;</code> (и)</li>
+</ul>
+<p><code>c = a &amp; b;</code> (<code>c</code> равно <code>true</code>, если и <code>a</code>, и <code>b</code> равны <code>true</code>, иначе <code>c</code> будет равно <code>false</code>)</p>
+<ul>
+<li><code>!</code> (отрицание)</li>
+</ul>
+<p><code>c = !b;</code> (<code>c</code> равно <code>true</code>, если <code>b</code> равно <code>false</code>, иначе <code>c</code> будет равно <code>false</code>)</p>
+<ul>
+<li><code>^</code> (исключающее или)</li>
+</ul>
+<p><code>c = a ^ b;</code> (<code>c</code> равно <code>true</code>, если либо <code>a</code>, либо <code>b</code> (но не одновременно) равны <code>true</code>, иначе <code>c</code> будет равно <code>false</code>)</p>
+<ul>
+<li><code>||</code> (или)</li>
+</ul>
+<p><code>c = a || b;</code> (<code>c</code> равно <code>true</code>, если либо <code>a</code>, либо <code>b</code> (либо и <code>a</code>, и <code>b</code>) равны <code>true</code>, иначе <code>c</code> будет равно <code>false</code>)</p>
+<ul>
+<li><code>&amp;&amp;</code> (и)</li>
+</ul>
+<p><code>c = a &amp;&amp; b;</code> (<code>c</code> равно <code>true</code>, если и <code>a</code>, и <code>b</code> равны <code>true</code>, иначе <code>c</code> будет равно <code>false</code>)</p>
+<p>Здесь две пары операций <code>|</code> и <code>||</code> (а также <code>&amp;</code> и <code>&amp;&amp;</code>) выполняют похожие действия, однако же они не равнозначны.</p>
+<p>Выражение <code>c = a | b;</code> будет вычислять сначала оба значения - <code>a</code> и <code>b</code> и на их основе выводить результат.</p>
+<p>В выражении же <code>c = a || b;</code> вначале будет вычисляться значение <code>a</code>, и если оно равно <code>true</code>, то вычисление значения <code>b</code> уже смысла не имеет, так как у нас в любом случае уже <code>c</code> будет равно <code>true</code>. Значение <code>b</code> будет вычисляться только в том случае, если <code>a</code> равно <code>false</code>.</p>
+<p>То же самое касается пары операций <code>&amp;</code>/<code>&amp;&amp;</code>. В выражении <code>c = a &amp; b;</code> будут вычисляться оба значения - <code>a</code> и <code>b</code>.</p>
+<p>В выражении же <code>c = a &amp;&amp; b;</code> сначала будет вычисляться значение <code>a</code>, и если оно равно <code>false</code>, то вычисление значения <code>b</code> уже не имеет смысла, так как значение <code>c</code> в любом случае равно <code>false</code>. Значение <code>b</code> будет вычисляться только в том случае, если <code>a</code> равно <code>true</code>.</p>
+<p>Таким образом, операции <code>||</code> и <code>&amp;&amp;</code> более удобны в вычислениях, позволяя сократить время на вычисление значения выражения.</p>
+<h4 id="_17">Таблицы истинности</h4>
+<ul>
+<li>Отрицание:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><code>a</code></th>
+<th><code>!a</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>false</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>true</code></td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>И:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><code>a</code></th>
+<th><code>b</code></th>
+<th><code>a &amp; b</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>false</code></td>
+<td><code>false</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td><code>true</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>true</code></td>
+<td><code>false</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>true</code></td>
+<td><code>true</code></td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Или:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><code>a</code></th>
+<th><code>b</code></th>
+<th><code>a || b</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>false</code></td>
+<td><code>false</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td><code>true</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>true</code></td>
+<td><code>false</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>true</code></td>
+<td><code>true</code></td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Исключающее или:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><code>a</code></th>
+<th><code>b</code></th>
+<th><code>a ^ b</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>false</code></td>
+<td><code>false</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td><code>true</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>true</code></td>
+<td><code>false</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>true</code></td>
+<td><code>true</code></td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="_18">Дополнительные материалы</h4>
+<ul>
+<li><a href="https://ru.wikipedia.org/wiki/Таблица_истинности">Таблица истинности - Википедия</a></li>
+</ul>
+<h3 id="_19">Преобразование числовых типов</h3>
+<p>Каждый базовый тип данных занимает определенное количество байт памяти. Это накладывает ограничение на операции, в которые вовлечены различные типы данных.</p>
+<pre><code class="language-java">int a = 4;
+byte b = a; // Ошибка
+</code></pre>
+<p>В данном коде произойдёт ошибка. Хотя и тип <code>byte</code>, и тип <code>int</code> представляют целые числа. Более того, значение переменной <code>a</code>, которое присваивается переменной типа <code>byte</code>, вполне укладывается в диапазон значений для типа <code>byte</code> (от <code>-128</code> до <code>127</code>). Тем не менее происходит ошибка на этапе компиляции. Поскольку в данном случае присваиваются некоторые данные, которые занимают 4 байта, переменной, которая занимает всего один байт.</p>
+<p>Тем не менее в программе может потребоваться, чтобы подобное преобразование было выполнено. В этом случае необходимо использовать операцию преобразования типов (операция <code>()</code>):</p>
+<pre><code class="language-java">int a = 4;
+byte b = (byte) a;     // преобразование типов: от типа int к типу byte
+System.out.println(b); // 4
+</code></pre>
+<p>Операция преобразования типов предполагает указание в скобках того типа, к которому надо преобразовать значение. Например, в случае операции <code>(byte) a</code>, идет преобразование данных типа <code>int</code> в тип <code>byte</code>. В итоге мы получим значение типа <code>byte</code>.</p>
+<h4 id="_20">Автоматическое преобразование</h4>
+<p><img alt="" src="../img/%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5_%D0%BF%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D1%87%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D1%8B%D1%85_%D1%82%D0%B8%D0%BF%D0%BE%D0%B2.png" /></p>
+<p>Стрелками на рисунке показано, какие преобразования типов могут выполняться автоматически. Пунктирными стрелками показаны автоматические преобразования с потерей точности.</p>
+<p>Пример автоматического преобразования:</p>
+<pre><code class="language-java">byte b = 7;
+int d = b; // преобразование от byte к int
+</code></pre>
+<p>В данном случае значение типа <code>byte</code>, которое занимает в памяти 1 байт, расширяется до типа <code>int</code>, которое занимает 4 байта.</p>
+<p>Автоматические преобразования представлены следующими цепочками:</p>
+<p><code>byte</code> -&gt; <code>short</code> -&gt; <code>int</code> -&gt; <code>long</code></p>
+<p><code>int</code> -&gt; <code>double</code></p>
+<p><code>short</code> -&gt; <code>float</code> -&gt; <code>double</code></p>
+<p><code>char</code> -&gt; <code>int</code></p>
+<p>Некоторые преобразования могут производиться автоматически между типами данных одинаковой разрядности или даже от типа данных с большей разрядностью к типа с меньшей разрядностью. Это следующие цепочки преобразований: <code>int</code> -&gt; <code>float</code>, <code>long</code> -&gt; <code>float</code> и <code>long</code> -&gt; <code>double</code>. Они производятся без ошибок, но при преобразовании мы можем столкнуться с потерей информации.</p>
+<p>Пример:</p>
+<pre><code class="language-java">int a = 2147483647;
+float b = a;           // от типа int к типу float
+System.out.println(b); // 2.14748365E9
+</code></pre>
+<h4 id="_21">Приведение типов</h4>
+<p>Во всех остальных преобразованиях примитивных типов явным образом применяется операция привидения типов. Обычно это преобразования от типа с большей разрядностью к типу с меньшей разрядностью:</p>
+<pre><code class="language-java">long a = 4;
+int b = (int) a;
+</code></pre>
+<p>При применении привидения типов мы можем столкнуться с потерей данных. Например, в следующем коде у нас не возникнет никаких проблем:</p>
+<pre><code>int a = 5;
+byte b = (byte) a;
+System.out.println(b); // 5
+</code></pre>
+<p>Число <code>5</code> укладывается в диапазон значений типа <code>byte</code>, поэтому после привидения переменная <code>b</code> будет равна <code>5</code>.</p>
+<p>Но в следующем примере результатом будет число <code>2</code>:</p>
+<pre><code class="language-java">int a = 258;
+byte b = (byte) a;
+System.out.println(b); // 2
+</code></pre>
+<p>В данном случае число <code>258</code> вне диапазона для типа <code>byte</code> (от <code>-128</code> до <code>127</code>), поэтому произойдет усечение значения.</p>
+<p><em>Почему результатом будет именно число <code>2</code>? Число <code>a</code>, которое равно <code>258</code>, в двоичном системе будет равно <code>00000000 00000000 00000001 00000010</code>. Значения типа <code>byte</code> занимают в памяти только 8 бит. Поэтому двоичное представление числа <code>int</code> усекается до 8 правых разрядов, то есть <code>00000010</code>, что в десятичной системе дает число <code>2</code>.</em></p>
+<p>При преобразовании значений с плавающей точкой к целочисленным значениям, происходит усечение дробной части:</p>
+<pre><code class="language-java">double a = 56.9898;
+int b = (int) a;
+</code></pre>
+<p>Здесь значение числа <code>b</code> будет равно <code>56</code>, несмотря на то, что число <code>57</code> было бы ближе к <code>56.9898</code>.</p>
+<h4 id="_22">Преобразования при операциях</h4>
+<p>Нередки ситуации, когда приходится применять различные операции, например, сложение и произведение, над значениями разных типов. Здесь также действуют некоторые правила:</p>
+<ul>
+<li>если один из операндов операции относится к типу <code>double</code>, то и второй операнд преобразуется к типу <code>double</code></li>
+<li>если предыдущее условие не соблюдено, а один из операндов операции относится к типу <code>float</code>, то и второй операнд преобразуется к типу <code>float</code></li>
+<li>если предыдущие условия не соблюдены, один из операндов операции относится к типу <code>long</code>, то и второй операнд преобразуется к типу <code>long</code></li>
+<li>иначе все операнды операции преобразуются к типу <code>int</code></li>
+</ul>
+<p>Примеры преобразований:</p>
+<pre><code class="language-java">int a = 3;
+double b = 4.6;
+double c = a + b;
+</code></pre>
+<p>Так как в операции участвует значение типа <code>double</code>, то и другое значение приводится к типу <code>double</code> и сумма двух значений <code>a + b</code> будет представлять тип <code>double</code>.</p>
+<p>Другой пример:</p>
+<pre><code class="language-java">byte a = 3;
+short b = 4;
+byte c = (byte) (a + b);
+</code></pre>
+<p>Две переменных типа <code>byte</code> и <code>short</code> (не <code>double</code>, <code>float</code> или <code>long</code>), поэтому при сложении они преобразуются к типу <code>int</code>, и их сумма <code>a + b</code> представляет значение типа <code>int</code>. Поэтому если затем мы присваиваем эту сумму переменной типа <code>byte</code>, то нам опять надо сделать преобразование типов к <code>byte</code>.</p>
+<p>Если в операциях участвуют данные типа char, то они преобразуются в int:</p>
+<pre><code class="language-java">int d = 'a' + 5;
+System.out.println(d); // 102
+</code></pre>
+<h2 id="_23">Символьные строки</h2>
+<p>В языке Java отсутствует встроенный тип для символьных строк. Вместо этого в стандартной библиотеке Java содержится класс <code>String</code>. Каждая символьная строка, заключенная в кавычки, представляет собой экземпляр класса <code>String</code>:</p>
+<pre><code class="language-java">String е = &quot;&quot;; // пустая строка
+String greeting = &quot;Hello&quot;;
+</code></pre>
+<p>По существу, символьная строка Java представляет собой последовательность символов (тип данных <code>char</code>).</p>
+<h3 id="_24">Подстроки</h3>
+<p>С помощью метода <code>substring()</code> из класса <code>String</code> можно выделить подстроку из отдельной символьной строки. Например, в результате выполнения приведенного ниже фрагмента кода формируется подстрока <code>"Неl"</code>.</p>
+<pre><code class="language-java">String greetiпg = &quot;Hello&quot;;
+String s = greeting.substring(0, 3);
+</code></pre>
+<p>Второй параметр метода <code>substring()</code> обозначает позицию символа, который не следует включать в состав подстроки. В данном примере требуется скопировать символы на трех позициях, 0, 1 и 2 (т.е. от позиции 0 до позиции 2 включительно), поэтому при вызове метода <code>substring()</code> указываются значения 0 и 3, обозначающие копируемые символы от позиции 0 и до позиции 2 включительно, но исключая позицию 3.</p>
+<h3 id="_25">Сцепление строк</h3>
+<p>В языке Java, как и в большинстве других языков программирования, предоставляется возможность объединить две символьные строки, используя знак <code>+</code> операции сцепления.</p>
+<pre><code class="language-java">String expletive = &quot;Expletive&quot;;
+String PG13 = &quot;deleted&quot;;
+String message = expletive + PG13;
+</code></pre>
+<p>В приведенном выше фрагменте кода переменной <code>message</code> присваивается символьная строка <code>"Expletivedeleted"</code>, сцепленная из двух исходных строк. (Обратите внимание на отсутствие пробела между словами в этой строке. Знак <code>+</code> операции сцепления соединяет две строки точно в том порядке, в каком они были заданы в качестве операндов.)</p>
+<p>При сцеплении символьной строки со значением, не являющимся строковым, это значение преобразуется в строковое. В приведенном ниже примере кода переменной <code>rating</code> присваивается символьная строка <code>"PGlЗ"</code>, полученная путем сцепления символьной строки с числовым значением, автоматически преобразуемым в строковое.</p>
+<pre><code class="language-java">int age = 13;
+String rating = &quot;PG&quot; + age;
+</code></pre>
+<p>Если требуется соединить вместе две символьные строки, разделяемые каким-нибудь знаком, то для этой цели можно воспользоваться статическим методом <code>join()</code>, как показано ниже.</p>
+<pre><code class="language-java">String all = String.join(&quot; / &quot;, &quot;S&quot;, &quot;М&quot;, &quot;L&quot;, &quot;XL&quot;); // в итоге переменная all содержит строку &quot;S / М / L / XL&quot;
+</code></pre>
+<p>В версии 11 появился метод <code>repeat()</code>, позволяющий повторять сколько требуется заданную символьную строку:</p>
+<pre><code class="language-java">String repeated = &quot;Java&quot;.repeat(3); // повторить строку &quot;Java&quot;, чтобы
+                                    // получить в итоге строку &quot;JavaJavaJava&quot;
+</code></pre>
+<h3 id="_26">Принцип постоянства символьных строк</h3>
+<p>В классе <code>String</code> отсутствуют методы, которые позволяли бы изменять символы в существующей строке. Так, если требуется заменить символьную строку в переменной <code>greeting</code> с <code>"Hello"</code> на <code>"Help!"</code>, этого нельзя добиться одной лишь заменой двух последних символов. В языке Java можно внести необходимые изменения в строку, выполнив сцепление подстроки, которую требуется сохранить, с заменяющими символами, как показано ниже. В итоге переменной <code>greeting</code> присваивается символьная строка <code>"Help!"</code>.</p>
+<pre><code class="language-java">greeting = greeting.substring(O, 3) + &quot;р!&quot;;
+</code></pre>
+<h3 id="_27">Проверка символьных строк на равенство</h3>
+<p>Чтобы проверить две символьные строки на равенство, достаточно вызвать метод <code>equals()</code>. Так, выражение <code>s.equals(t)</code> возвращает логическое значение <code>true</code>, если символьные строки <code>s</code> и <code>t</code> равны, а иначе - логическое значение <code>false</code>. Следует, однако, иметь в виду, что в качестве <code>s</code> и <code>t</code> могут быть использованы строковые переменные или константы. Например, следующее выражение вполне допустимо:</p>
+<pre><code class="language-java">&quot;Hello!&quot;.equals(greeting);
+</code></pre>
+<p>А для того, чтобы проверить идентичность строк, игнорируя отличия в прописных и строчных буквах, следует вызвать метод <code>equalsIgnoreCase()</code>, как показано ниже.</p>
+<pre><code class="language-java">&quot;Hello&quot;.equalsIgnoreCase(&quot;hello&quot;);
+</code></pre>
+<p>Для проверки символьных строк на равенство нельзя применять операцию <code>==</code>. Она лишь определяет, хранятся ли обе строки в одной и той же области памяти. Разумеется, если обе строки хранятся в одном и том же месте, они должны совпадать. Но вполне возможна ситуация, когда одинаковые символьные строки хранятся в разных местах. Ниже приведен соответствующий пример.</p>
+<pre><code class="language-java">String greeting = &quot;Hello&quot;; // инициализировать переменную greeting
+                           // символьной строкой &quot;Hello&quot;
+if (greeting == &quot;Hello&quot;) ...
+    // возможно, это условие истинно
+if (greeting.substring(O, 3) == &quot;Hel&quot;)
+    // возможно, это условие ложно
+</code></pre>
+<h3 id="_28">Построение символьных строк</h3>
+<p>Время от времени у вас будет возникать потребность в составлении одних символьных строк из других, более коротких строк, вводимых с клавиатуры или из файла. Было бы неэффективно постоянно пользоваться для этой цели сцеплением строк. Ведь при каждом сцеплении символьных строк конструируется новый объект типа <code>String</code>, на что расходуется время и память. Этого можно избежать, применяя класс <code>StringBuilder</code>.</p>
+<p>Если требуется создать символьную строку из нескольких небольших фрагментов, сконструируйте сначала пустой объект в качестве построителя символьной строки:</p>
+<pre><code class="language-java">StringBuilder builder = new StringBuilder();
+</code></pre>
+<p>Когда же потребуется добавить новый фрагмент в символьную строку, вызовите метод <code>append()</code>, как показано ниже.</p>
+<pre><code class="language-java">builder.append(ch);  // добавить единственный символ
+builder.append(str); // добавить символьную строку
+</code></pre>
+<p>Завершив составление символьной строки, вызовите метод <code>toString()</code>. Таким образом, вы получите объект типа <code>String</code>, состоящий из последовательности символов, содержащихся в объекте построителя символьных строк:</p>
+<pre><code class="language-java">String completedString = builder.toString();
+</code></pre>
+<h2 id="_29">Консольный ввод/вывод</h2>
+<p>Наиболее простой способ взаимодействия с пользователем представляет консоль: мы можем выводить на консоль некоторую информацию или, наоборот, считывать с консоли некоторые данные. Для взаимодействия с консолью в Java применяется класс <code>System</code>, а его функциональность собственно обеспечивает консольный ввод и вывод.</p>
+<h3 id="_30">Вывод в консоль</h3>
+<p>Для создания потока вывода в класс <code>System</code> определен объект <code>out</code>. В этом объекте определен метод <code>println</code>, который позволяет вывести на консоль некоторое значение с последующим переводом курсора консоли на следующую строку. Например:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String[] args) {
+        System.out.println(&quot;Hello world!&quot;);
+        System.out.println(&quot;Bye world...&quot;);
+    }
+}
+</code></pre>
+<p>В метод <code>println</code> передается любое значение, как правило, строка, которое надо вывести на консоль. И в данном случае мы получим следующий вывод:</p>
+<pre><code class="language-text">Hello world!
+Bye world...
+</code></pre>
+<p>При необходимости можно и не переводить курсор на следующую строку. В этом случае можно использовать метод <code>System.out.print()</code>, который аналогичен <code>println</code> за тем исключением, что не осуществляет перевода на следующую строку.</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String[] args) {
+        System.out.print(&quot;Hello world!&quot;);
+        System.out.print(&quot;Bye world...&quot;);
+    }
+}
+</code></pre>
+<p>Консольный вывод данной программы:</p>
+<pre><code class="language-text">Hello world!Bye world...
+</code></pre>
+<p>Но с помощью метода <code>System.out.print</code> также можно осуществить перевод каретки на следующую строку. Для этого надо использовать escape-последовательность <code>\n</code>:</p>
+<pre><code class="language-java">System.out.print(&quot;Hello world \n&quot;);
+</code></pre>
+<p>Нередко необходимо подставлять в строку какие-нибудь данные. Например, у нас есть два числа, и мы хотим вывести их значения на экран. В этом случае мы можем, например, написать так:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String[] args) {
+        int x=5;
+        int y=6;
+        System.out.println(&quot;x=&quot; + x + &quot;; y=&quot; + y);
+    }
+}
+</code></pre>
+<p>Консольный вывод программы:</p>
+<pre><code class="language-text">x=5; y=6
+</code></pre>
+<p>Но в Java есть также функция для форматированного вывода: <code>System.out.printf()</code>. С ее помощью можно переписать предыдущий пример следующим образом:</p>
+<pre><code class="language-java">int x=5;
+int y=6;
+System.out.printf(&quot;x=%d; y=%d \n&quot;, x, y);
+</code></pre>
+<p>В данном случае символы <code>%d</code> обозначают спецификатор, вместо которого подставляет один из аргументов. Спецификаторов и соответствующих им аргументов может быть множество. В данном случае у нас только два аргумента, поэтому вместо первого <code>%d</code> подставляет значение переменной <code>x</code>, а вместо второго - значение переменной <code>y</code>. Сама буква <code>d</code> означает, что данный спецификатор будет использоваться для вывода целочисленных значений.</p>
+<p>Кроме спецификатора <code>%d</code> мы можем использовать еще ряд спецификаторов для других типов данных:</p>
+<ul>
+<li><code>%x</code>: для вывода шестнадцатеричных чисел</li>
+<li><code>%f</code>: для вывода чисел с плавающей точкой</li>
+<li><code>%e</code>: для вывода чисел в экспоненциальной форме, например, <code>1.3e+01</code></li>
+<li><code>%c</code>: для вывода одиночного символа</li>
+<li><code>%s</code>: для вывода строковых значений</li>
+</ul>
+<p>Например:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String[] args) {
+        String name = &quot;Tom&quot;;
+        int age = 30;
+        float height = 1.7f;
+
+        System.out.printf(&quot;Name: %s  Age: %d  Height: %.2f \n&quot;, name, age, height);
+    }
+}
+</code></pre>
+<p>При выводе чисел с плавающей точкой мы можем указать количество знаков после запятой, для этого используем спецификатор на <code>%.2f</code>, где <code>.2</code> указывает, что после запятой будет два знака. В итоге мы получим следующий вывод:</p>
+<pre><code class="language-text">Name: Tom  Age: 30  Height: 1,70
+</code></pre>
+<h3 id="_31">Ввод с консоли</h3>
+<p>Для получения ввода с консоли в классе <code>System</code> определен объект <code>in</code>. Однако непосредственно через объект <code>System.in</code> не очень удобно работать, поэтому, как правило, используют класс <code>Scanner</code>, который, в свою очередь использует <code>System.in</code>. Например, напишем маленькую программу, которая осуществляет ввод чисел:</p>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class Program {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print(&quot;Input a number: &quot;);
+        int num = in.nextInt();
+
+        System.out.printf(&quot;Your number: %d \n&quot;, num);
+        in.close();
+    }
+}
+</code></pre>
+<p>Так как класс <code>Scanner</code> находится в пакете <code>java.util</code>, то мы вначале его импортируем с помощью инструкции <code>import java.util.Scanner</code>.</p>
+<p>Для создания самого объекта <code>Scanner</code> в его конструктор передается объект <code>System.in</code>. После этого мы можем получать вводимые значения. Например, в данном случае вначале выводим приглашение к вводу и затем получаем вводимое число в переменную <code>num</code>.</p>
+<p>Чтобы получить введенное число, используется метод <code>in.nextInt()</code>, который возвращает введенное с клавиатуры целочисленное значение.</p>
+<p>Пример работы программы:</p>
+<pre><code class="language-text">Input a number: 5
+Your number: 5
+</code></pre>
+<p>Класс <code>Scanner</code> имеет еще ряд методов, которые позволяют получить введенные пользователем значения:</p>
+<ul>
+<li><code>next()</code>: считывает введенную строку до первого пробела</li>
+<li><code>nextLine()</code>: считывает всю введенную строку</li>
+<li><code>nextInt()</code>: считывает введенное число <code>int</code></li>
+<li><code>nextDouble()</code>: считывает введенное число <code>double</code></li>
+<li><code>nextBoolean()</code>: считывает значение <code>boolean</code></li>
+<li><code>nextByte()</code>: считывает введенное число <code>byte</code></li>
+<li><code>nextFloat()</code>: считывает введенное число <code>float</code></li>
+<li><code>nextShort()</code>: считывает введенное число <code>short</code></li>
+</ul>
+<p>То есть для ввода значений каждого примитивного типа в классе <code>Scanner</code> определен свой метод.</p>
+<p>Например, создадим программу для ввода информации о человеке:</p>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class Program {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print(&quot;Input name: &quot;);
+        String name = in.nextLine();
+        System.out.print(&quot;Input age: &quot;);
+        int age = in.nextInt();
+        System.out.print(&quot;Input height: &quot;);
+        float height = in.nextFloat();
+        System.out.printf(&quot;Name: %s  Age: %d  Height: %.2f \n&quot;, name, age, height);
+        in.close();
+    }
+}
+</code></pre>
+<p>Здесь последовательно вводятся данные типов <code>String</code>, <code>int</code>, <code>float</code> и потом все введенные данные вместе выводятся на консоль. Пример работы программы:</p>
+<pre><code class="language-text">Input name: Tom
+Input age: 34
+Input height: 1,7
+Name: Tom  Age: 34  Height: 1,70
+</code></pre>
+<p>Обратите внимание, что для ввода значения типа <code>float</code> (то же самое относится к типу <code>double</code>) применяется число "1,7", где разделителем является запятая, а не "1.7", где разделителем является точка. В данном случае все зависит от текущей языковой локализации системы. В данном случае русскоязычная локализация, соответственно вводить необходимо числа, где разделителем является запятая. То же самое касается многих других локализаций, например, немецкой, французской и т.д., где применяется запятая.</p>
+<h2 id="_32">Файловый ввод/вывод</h2>
+<p>Чтобы прочитать данные из файла, достаточно сконструировать объект типа <code>Scanner</code>:</p>
+<pre><code class="language-java">Scanner in = new Scanner(Path.of(&quot;myfile.txt&quot;), StandardCharsets.UTF_8);
+</code></pre>
+<p>Если имя файла содержит знаки обратной косой черты, их следует экранировать дополнительными знаками обратной косой черты, как, например, <code>"с:\\mydirectory\\myfile.txt"</code>. После этого можно произвести чтение из файла, используя любые упомянутые выше методы из класса <code>Scanner</code>.</p>
+<p>А для того, чтобы записать данные в файл, достаточно сконструировать объект типа <code>PrintWriter</code>, указав в ero конструкторе имя файла:</p>
+<pre><code class="language-java">PrintWriter out = new PrintWriter(&quot;myfile.txt&quot;, StandardCharsets.UTF_8);
+</code></pre>
+<p>Если файл не существует, он создается. Для вывода в файл можно воспользоваться методами <code>print()</code>, <code>println()</code> и <code>printf()</code> точно так же, как это делается для вывода в консоль (или в стандартный поток вывода <code>System.out</code>).</p>
+<p>Если вы конструируете объект типа <code>Scanner</code> с файлом, который еще не существует, или объект типа <code>PrintWriter</code> с именем файла, который не может быть создан, возникает исключение. Компилятор Java рассматривает подобные исключения как более серьезные, чем, например, исключение при делении на нуль. Позже будут рассмотрены различные способы обработки исключений. А до тех пор достаточно уведомить компилятор о том, что при файловом вводе и выводе может возникнуть исключение типа "файл не найден". Для этого в объявление метода <code>main()</code> вводится предложение <code>throws</code>, как показано ниже.</p>
+<pre><code class="language-java">public static void main(String[] args) throws IOException {
+    Scanner in = new Scanner(Path.of(&quot;myfile.txt&quot;), StandardCharsets.UTF_8);
+    ...
+}
+</code></pre>
+<h2 id="_33">Управляющая логика</h2>
+<h3 id="_34">Область видимости блоков</h3>
+<p>Блок состоит из ряда операторов Java, заключенных в фигурные скобки. Блоки определяют область видимости переменных и могут быть вложенными один в другой. Ниже приведен пример одного блока, вложенного в другой блок в методе <code>main()</code>.</p>
+<pre><code class="language-java">public static void main(String[] args) {
+    int n;
+    {
+        int k;
+    } // переменная k определена только в этом блоке
+}
+</code></pre>
+<p>В языке Java нельзя объявлять переменные с одинаковым именем в двух вложенных блоках. Например, приведенный ниже фрагмент кода содержит ошибку и не будет скомпилирован.</p>
+<pre><code class="language-java">public static void maiп(String(] args) {
+    int n;
+    {
+        int k;
+        int n; // ОШИБКА: переопределить переменную n
+               // во внутреннем блоке нельзя
+    }
+}
+</code></pre>
+<h3 id="_35">Условные операторы</h3>
+<p>Данные операторы позволяют направить работу программы по одному из путей в зависимости от определенных условий.</p>
+<h4 id="ifelse">if/else</h4>
+<p>Выражение <code>if</code>/<code>else</code> проверяет истинность некоторого условия и в зависимости от результатов проверки выполняет определенный код:</p>
+<pre><code class="language-java">int num1 = 6;
+int num2 = 4;
+if (num1 &gt; num2) {
+    System.out.println(&quot;Первое число больше второго&quot;);
+}
+</code></pre>
+<p>После ключевого слова <code>if</code> ставится условие. И если это условие выполняется, то срабатывает код, который помещен далее в блоке <code>if</code> после фигурных скобок.</p>
+<p>Так как, в данном случае первое число больше второго, то выражение <code>num1 &gt; num2</code> истинно и возвращает значение <code>true</code>. Следовательно, управление переходит в блок кода после фигурных скобок и начинает выполнять содержащиеся там инструкции, а конкретно метод <code>System.out.println("Первое число больше второго");</code>. Если бы первое число оказалось бы меньше второго или равно ему, то инструкции в блоке <code>if</code> не выполнялись бы.</p>
+<p>Если необходимо, чтобы при несоблюдении условия также выполнялись какие-либо действия, можно добавить блок <code>else</code>:</p>
+<pre><code class="language-java">int num1 = 6;
+int num2 = 4;
+if (num1 &gt; num2) {
+    System.out.println(&quot;Первое число больше второго&quot;);
+} else {
+    System.out.println(&quot;Первое число меньше второго&quot;);
+}
+</code></pre>
+<p>Но при сравнении чисел мы можем насчитать три состояния: первое число больше второго, первое число меньше второго и числа равны. С помощью выражения <code>else if</code>, можно обрабатывать дополнительные условия:</p>
+<pre><code>int num1 = 6;
+int num2 = 8;
+if (num1 &gt; num2) {
+    System.out.println(&quot;Первое число больше второго&quot;);
+} else if (num1 &lt; num2) {
+    System.out.println(&quot;Первое число меньше второго&quot;);
+} else {
+    System.out.println(&quot;Числа равны&quot;);
+}
+</code></pre>
+<p>Также можно соединить сразу несколько условий, используя логические операторы:</p>
+<pre><code class="language-java">int num1 = 8;
+int num2 = 6;
+if (num1 &gt; num2 &amp;&amp; num1 &gt; 7) {
+    System.out.println(&quot;Первое число больше второго и больше 7&quot;);
+}
+</code></pre>
+<p>Здесь блок <code>if</code> будет выполняться, если <code>num1 &gt; num2</code> равно <code>true</code> и одновременно <code>num1 &gt; 7</code> равно <code>true</code>.</p>
+<h4 id="switch">switch</h4>
+<p>Конструкция <code>switch</code>/<code>case</code> аналогична конструкции <code>if</code>/<code>else</code>, так как позволяет обработать сразу несколько условий:</p>
+<pre><code class="language-java">int num = 8;
+switch (num) {
+    case 1: 
+        System.out.println(&quot;число равно 1&quot;);
+        break;
+    case 8: 
+        System.out.println(&quot;число равно 8&quot;);
+        num++;
+        break;
+    case 9: 
+        System.out.println(&quot;число равно 9&quot;);
+        break;
+    default:
+        System.out.println(&quot;число не равно 1, 8, 9&quot;);
+}
+</code></pre>
+<p>После ключевого слова <code>switch</code> в скобках идет сравниваемое выражение. Значение этого выражения последовательно сравнивается со значениями, помещенными после операторов <code>сase</code>. И если совпадение найдено, выполняется соответствующий блок <code>сase</code>.</p>
+<p>В конце блока <code>сase</code> ставится оператор <code>break</code>, чтобы избежать выполнения других блоков. Например, если убрать оператор <code>break</code> в следующем случае:</p>
+<pre><code class="language-java">case 8:
+    System.out.println(&quot;число равно 8&quot;);
+    num++;
+case 9:
+    System.out.println(&quot;число равно 9&quot;);
+    break;
+</code></pre>
+<p>то выполнился бы блок <code>case 8</code>, (поскольку переменная <code>num</code> равна <code>8</code>). Но так как в этом блоке оператор <code>break</code> отсутствует, то начал бы выполняться блок <code>case 9</code>.</p>
+<p>Если мы хотим также обработать ситуацию, когда совпадения не будет найдено, то можно добавить блок <code>default</code>, как в примере выше. Хотя блок <code>default</code> необязателен.</p>
+<p>Также мы можем определить одно действие сразу для нескольких блоков <code>case</code> подряд:</p>
+<pre><code class="language-java">int num = 3;
+int output = 0;
+switch (num) {
+    case 1: 
+        output = 3;
+        break;
+    case 2: 
+    case 3: 
+    case 4: 
+        output = 6;
+        break;
+    case 5: 
+        output = 12;
+        break;
+    default:
+        output = 24;
+}
+System.out.println(output);
+</code></pre>
+<h4 id="_36">Тернарный оператор</h4>
+<p>Тернарный оператор имеет следующий синтаксис: <code>[первый операнд - условие] ? [второй операнд] : [третий операнд]</code>. Таким образом, в этой операции участвуют сразу три операнда. В зависимости от условия тернарный оператор возвращает второй или третий операнд: если условие равно <code>true</code>, то возвращается второй операнд; если условие равно <code>false</code>, то третий. Например:</p>
+<pre><code class="language-java">int x=3;
+int y=2;
+int z = x &lt; y ? (x + y) : (x - y);
+System.out.println(z);
+</code></pre>
+<p>Здесь результатом тернарной операции является переменная <code>z</code>. Сначала проверяется условие <code>x &lt; y</code>. И если оно соблюдается, то <code>z</code> будет равно второму операнду <code>(x+y)</code>, иначе <code>z</code> будет равно третьему операнду.</p>
+<h3 id="_37">Циклы</h3>
+<p>Еще одним видом управляющих конструкций являются циклы. Циклы позволяют в зависимости от определенных условий выполнять определенное действие множество раз. В языке Java есть следующие виды циклов:</p>
+<ul>
+<li><code>for</code></li>
+<li><code>do</code>...<code>while</code></li>
+<li><code>while</code></li>
+</ul>
+<h4 id="for">for</h4>
+<p>Цикл <code>for</code> имеет следующее формальное определение:</p>
+<pre><code class="language-java">for ([инициализация счетчика]; [условие]; [изменение счетчика]) {
+    // действия
+}
+</code></pre>
+<p>Рассмотрим стандартный цикл for:</p>
+<pre><code class="language-java">for (int i = 1; i &lt; 9; i++) {
+    System.out.printf(&quot;Квадрат числа %d равен %d \n&quot;, i, i * i);
+}
+</code></pre>
+<p>Первая часть объявления цикла - <code>int i = 1</code> создает и инициализирует счетчик <code>i</code>. Счетчик необязательно должен представлять тип <code>int</code>. Это может быть и любой другой числовой тип, например, <code>float</code>. Перед выполнением цикла значение счетчика будет равно <code>1</code>. В данном случае это то же самое, что и объявление переменной.</p>
+<p>Вторая часть - условие, при котором будет выполняться цикл. В данном случае цикл будет выполняться, пока <code>i</code> не достигнет <code>9</code>.</p>
+<p>И третья часть - изменение счетчика на единицу. Опять же нам необязательно увеличивать на единицу. Можно уменьшать: <code>i--</code>.</p>
+<p>В итоге блок цикла сработает 8 раз, пока значение <code>i</code> не станет равным <code>9</code>. И каждый раз это значение будет увеличиваться на <code>1</code>.</p>
+<p>Необязательно указывать все условия при объявлении цикла. Например, можно написать так:</p>
+<pre><code class="language-java">int i = 1;
+for (;;) {
+    System.out.printf(&quot;Квадрат числа %d равен %d \n&quot;, i, i * i);
+}
+</code></pre>
+<p>Определение цикла осталось тем же, только теперь блоки в определении у нас пустые: <code>for (;;)</code>. Теперь нет инициализированной переменной-счетчика, нет условия, поэтому цикл будет бесконечным.</p>
+<p>Либо можно опустить ряд блоков:</p>
+<pre><code class="language-java">int i = 1;
+for (; i&lt;9;) {
+    System.out.printf(&quot;Квадрат числа %d равен %d \n&quot;, i, i * i);
+    i++;
+}
+</code></pre>
+<p>Этот пример эквивалентен первому примеру: у нас также есть счетчик, только создан он вне цикла. У нас есть условие выполнения цикла. И есть изменение счетчика уже в самом блоке <code>for</code>.</p>
+<p>Цикл <code>for</code> может определять сразу несколько переменных и управлять ими:</p>
+<pre><code class="language-java">int n = 10;
+for (int i = 0, j = n - 1; i &lt; j; i++, j--) {
+    System.out.println(i * j);
+}
+</code></pre>
+<h4 id="dowhile">do...while</h4>
+<p>Цикл <code>do</code> сначала выполняет код цикла, а потом проверяет условие в инструкции <code>while</code>. И пока это условие истинно, цикл повторяется. Например:</p>
+<pre><code class="language-java">int j = 7;
+do {
+    System.out.println(j);
+    j--;
+} while (j &gt; 0);
+</code></pre>
+<p>В данном случае код цикла сработает 7 раз, пока <code>j</code> не окажется равным нулю. Важно отметить, что цикл <code>do</code> гарантирует хотя бы однократное выполнение действий, даже если условие в инструкции <code>while</code> не будет истинно. Можно написать:</p>
+<pre><code class="language-java">int j = -1;
+do {
+    System.out.println(j);
+    j--;
+} while (j &gt; 0);
+</code></pre>
+<p>Хотя переменная <code>j</code> изначально меньше <code>0</code>, цикл все равно один раз выполнится.</p>
+<h4 id="while">while</h4>
+<p>Цикл <code>while</code> сразу проверяет истинность некоторого условия, и если условие истинно, то код цикла выполняется:</p>
+<pre><code class="language-java">int j = 6;
+while (j &gt; 0) {
+    System.out.println(j);
+    j--;
+}
+</code></pre>
+<h4 id="break-continue">Операторы прерывания логики управления программой (break и continue)</h4>
+<p>Оператор <code>break</code> позволяет выйти из цикла в любой его момент, даже если цикл не закончил свою работу:</p>
+<p>Например:</p>
+<pre><code class="language-java">for (int i = 0; i &lt; 10; i++) {
+    if (i == 5)
+        break;
+    System.out.println(i);
+}
+</code></pre>
+<p>Когда счетчик станет равным <code>5</code>, сработает оператор <code>break</code>, и цикл завершится.</p>
+<p>Теперь сделаем так, чтобы если число равно <code>5</code>, цикл не завершался, а просто переходил к следующей итерации. Для этого используем оператор <code>continue</code>:</p>
+<pre><code class="language-java">for (int i = 0; i &lt; 10; i++) {
+    if (i == 5)
+        continue;
+    System.out.println(i);
+}
+</code></pre>
+<p>В этом случае, когда выполнение цикла дойдет до числа <code>5</code>, программа просто пропустит это число и перейдет к следующему.</p>
+<h2 id="_38">Массивы</h2>
+<p>Массив представляет набор однотипных значений. Объявление массива похоже на объявление обычной переменной, которая хранит одиночное значение, причем есть два способа объявления массива:</p>
+<pre><code class="language-java">тип_данных название_массива[];
+// либо
+тип_данных[] название_массива;
+</code></pre>
+<p>Например, определим массив чисел:</p>
+<pre><code class="language-java">int nums[];
+int[] nums2;
+</code></pre>
+<p>После объявления массива мы можем инициализовать его:</p>
+<pre><code class="language-java">int nums[];
+nums = new int[4]; // массив из 4 чисел
+</code></pre>
+<p>Создание массива производится с помощью следующей конструкции: <code>new тип_данных[количество_элементов]</code>, где <code>new</code> - ключевое слово, выделяющее память для указанного в скобках количества элементов. Например, <code>nums = new int[4];</code> - в этом выражении создается массив из четырех элементов <code>int</code>, и каждый элемент будет иметь значение по умолчанию - число 0.</p>
+<p>Также можно сразу при объявлении массива инициализировать его:</p>
+<pre><code class="language-java">int nums[] = new int[4];  // массив из 4 чисел
+int[] nums2 = new int[5]; // массив из 5 чисел
+</code></pre>
+<p>При подобной инициализации все элементы массива имеют значение по умолчанию. Для числовых типов (в том числе для типа <code>char</code>) это число 0, для типа <code>boolean</code> это значение <code>false</code>, а для остальных объектов это значение <code>null</code>. Например, для типа <code>int</code> значением по умолчанию является число 0, поэтому выше определенный массив <code>nums</code> будет состоять из четырех нулей.</p>
+<p>Однако также можно задать конкретные значения для элементов массива при его создании:</p>
+<pre><code class="language-java">// эти два способа равноценны
+int[] nums = new int[] { 1, 2, 3, 5 };
+
+int[] nums2 = { 1, 2, 3, 5 };
+</code></pre>
+<p>Стоит отметить, что в этом случае в квадратных скобках не указывается размер массива, так как он вычисляется по количеству элементов в фигурных скобках.</p>
+<p>После создания массива мы можем обратиться к любому его элементу по индексу, который передается в квадратных скобках после названия переменной массива:</p>
+<pre><code class="language-java">int[] nums = new int[4];
+// устанавливаем значения элементов массива
+nums[0] = 1;
+nums[1] = 2;
+nums[2] = 4;
+nums[3] = 100;
+
+// получаем значение третьего элемента массива
+System.out.println(nums[2]); // 4
+</code></pre>
+<p>Индексация элементов массива начинается с 0, поэтому в данном случае, чтобы обратиться к четвертому элементу в массиве, нам надо использовать выражение <code>nums[3]</code>.</p>
+<p>И так как у нас массив определен только для 4 элементов, то мы не можем обратиться, например, к шестому элементу: <code>nums[5] = 5;</code>. Если мы так попытаемся сделать, то мы получим ошибку.</p>
+<h3 id="_39">Длина массива</h3>
+<p>Важнейшее свойство, которым обладают массивы, является свойство length, возвращающее длину массива, то есть количество его элементов:</p>
+<pre><code class="language-java">int[] nums = {1, 2, 3, 4, 5};
+int length = nums.length; // 5
+</code></pre>
+<p>Нередко бывает неизвестным последний индекс, и чтобы получить последний элемент массива, мы можем использовать это свойство:</p>
+<pre><code class="language-java">int last = nums[nums.length-1];
+</code></pre>
+<h3 id="_40">Многомерные массивы</h3>
+<p>Ранее мы рассматривали одномерные массивы, которые можно представить как цепочку или строку однотипных значений. Но кроме одномерных массивов также бывают и многомерные. Наиболее известный многомерный массив - таблица, представляющая двухмерный массив:</p>
+<pre><code class="language-java">int[] nums1 = new int[] { 0, 1, 2, 3, 4, 5 };
+
+int[][] nums2 = { { 0, 1, 2 }, { 3, 4, 5 } };
+</code></pre>
+<p>Визуально оба массива можно представить следующим образом:</p>
+<p><strong>Одномерный массив nums1</strong></p>
+<table>
+<thead>
+<tr>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Двухмерный массив nums2</strong></p>
+<table>
+<thead>
+<tr>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<p>Поскольку массив <code>nums2</code> двухмерный, он представляет собой простую таблицу. Его также можно было создать следующим образом: <code>int[][] nums2 = new int[2][3];</code>. Количество квадратных скобок указывает на размерность массива. А числа в скобках - на количество строк и столбцов. И также, используя индексы, мы можем использовать элементы массива в программе:</p>
+<pre><code class="language-java">// установим элемент первого столбца второй строки
+nums2[1][0] = 44;
+System.out.println(nums2[1][0]);
+</code></pre>
+<p>Объявление трехмерного массива могло бы выглядеть так:</p>
+<pre><code class="language-java">int[][][] nums3 = new int[2][3][4];
+</code></pre>
+<h3 id="_41">Зубчатый массив</h3>
+<p>Многомерные массивы могут быть также представлены как "зубчатые массивы". В вышеприведенном примере двухмерный массив имел 2 строчки и три столбца, поэтому у нас получалась ровная таблица. Но мы можем каждому элементу в двухмерном массиве присвоить отдельный массив с различным количеством элементов:</p>
+<pre><code class="language-java">int[][] nums = new int[3][];
+nums[0] = new int[2];
+nums[1] = new int[3];
+nums[2] = new int[5];
+</code></pre>
+<h3 id="for-each">Цикл for each</h3>
+<p>Цикл "for each" - это специальная версия цикла <code>for</code> предназначена для перебора элементов в наборах элементов, например, в массивах и коллекциях. Формальное его объявление:</p>
+<pre><code class="language-java">for (тип_данных название_переменной : контейнер) {
+    // действия
+}
+</code></pre>
+<p>Например:</p>
+<pre><code class="language-java">int[] array = new int[] { 1, 2, 3, 4, 5 };
+for (int i : array) {
+    System.out.println(i);
+}
+</code></pre>
+<p>В качестве контейнера в данном случае выступает массив данных типа <code>int</code>. Затем объявляется переменная с типом <code>int</code>.</p>
+<p>То же самое можно было бы сделать и с помощью обычной версии for:</p>
+<pre><code class="language-java">int[] array = new int[] { 1, 2, 3, 4, 5 };
+for (int i = 0; i &lt; array.length; i++) {
+    System.out.println(array[i]);
+}
+</code></pre>
+<p>В то же время эта версия цикла <code>for</code> более гибкая по сравнению с <code>for (int i : array)</code>. В частности, в этой версии мы можем изменять элементы:</p>
+<pre><code class="language-java">int[] array = new int[] { 1, 2, 3, 4, 5 };
+for (int i = 0; i &lt; array.length; i++) {
+    array[i] = array[i] * 2;
+    System.out.println(array[i]);
+}
+</code></pre>
+<h3 id="_42">Перебор многомерных массивов в цикле</h3>
+<pre><code class="language-java">int[][] nums = new int[][]
+{
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
+};
+for (int i = 0; i &lt; nums.length; i++) {
+    for(int j = 0; j &lt; nums[i].length; j++) {
+        System.out.printf(&quot;%d &quot;, nums[i][j]);
+    }
+    System.out.println();
+}
+</code></pre>
+<p>Сначала создается цикл для перебора по строкам, а затем внутри первого цикла создается внутренний цикл для перебора по столбцам конкретной строки. Подобным образом можно перебрать и трехмерные массивы и наборы с большим количеством размерностей.</p>
+<h2 id="_43">Методы</h2>
+<p>Если переменные и константы хранят некоторые значения, то методы содержат собой набор операторов, которые выполняют определенные действия.</p>
+<p>Общее определение методов выглядит следующим образом:</p>
+<pre><code>[модификаторы] тип_возвращаемого_значения название_метода([параметры]) {
+    // тело метода
+}
+</code></pre>
+<p>Модификаторы и параметры необязательны.</p>
+<p>По умолчанию главный класс любой программы на Java содержит метод <code>main</code>, который служит точкой входа в программу:</p>
+<pre><code class="language-java">public static void main(String[] args) {
+  System.out.println(&quot;привет мир!&quot;);
+}
+</code></pre>
+<p>Ключевые слова <code>public</code> и <code>static</code> являются модификаторами. Далее идет тип возвращаемого значения. Ключевое слово <code>void</code> указывает на то, что метод ничего не возвращает.</p>
+<p>Затем идут название метода - <code>main</code> и в скобках параметры метода - <code>String[] args</code>. И в фигурные скобки заключено тело метода - все действия, которые он выполняет.</p>
+<p>Создадим еще несколько методов:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String args[]) {
+        // ...
+    }
+
+    void hello() {     
+        System.out.println(&quot;Hello&quot;);
+    }
+
+    void welcome() {
+        System.out.println(&quot;Welcome to Java 10&quot;);
+    }
+}
+</code></pre>
+<p>Здесь определены два дополнительных метода: <code>hello</code> и <code>welcome</code>, каждый из которых выводит некоторую строку на консоль. Методы определяются внутри класса - в данном случае внутри класса <code>Program</code>, в котором определен метод <code>main</code>.</p>
+<p>Но если мы скомпилируем и запустим данную программу, то мы ничего не увидим на консоли. В примере выше мы определили два метода, но мы их нигде не вызываем. По умолчанию в программе Java выполняется только метод <code>main</code> и все его содержимое. Поэтому, если мы хотим, чтобы другие методы тоже выполнялись, их надо вызвать в методе <code>main</code>.</p>
+<p>Вызов метода осуществляется в форме:</p>
+<pre><code>имя_метода(аргументы);
+</code></pre>
+<p>После имени метода указываются скобки, в которых перечисляются аргументы - значения для параметров метода.</p>
+<p>Например, определим и выполним несколько методов:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String args[]) {
+         hello();
+         welcome();
+         welcome();
+    }
+
+    static void hello() {     
+        System.out.println(&quot;Hello&quot;);
+    }
+
+    static void welcome() {     
+        System.out.println(&quot;Welcome to Java 10&quot;);
+    }
+}
+</code></pre>
+<p>В методе <code>main</code> вызывается один раз метод <code>hello</code> и два раза метод <code>welcome</code>. В этом и заключается одно из преимуществ методов: мы можем вынести некоторые общие действия в отдельный метод и затем вызывать многократно их в различных местах программы. Поскольку оба метода не имеют никаких параметров, то после их названия при вызове ставятся пустые скобки.</p>
+<p>Также следует отметить, что чтобы вызвать в методе <code>main</code> другие методы, которые определены в одном классе с методом <code>main</code>, они должны иметь модификатор <code>static</code>.</p>
+<p>В итоге после компиляции и выполнения программы мы увидим на консоли:</p>
+<pre><code>Hello
+Welcome to Java 10
+Welcome to Java 10
+</code></pre>
+<h3 id="_44">Параметры методов</h3>
+<p>С помощью параметров мы можем передать в методы различные данные, которые будут использоваться для вычислений. Например:</p>
+<pre><code class="language-java">static void sum(int x, int y) {
+    int z = x + y;
+    System.out.println(z);
+}
+</code></pre>
+<p>Данная функция принимает два параметра - два числа, складывает их и выводит их сумму в консоль.</p>
+<p>А при вызове этого метода в программе нам необходимо передать на место параметров значения, которые соответствуют типу параметра:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String args[]) {      
+        int a = 6;
+        int b = 8;
+        sum(a, b);  // 14
+        sum(3, a);  // 9
+        sum(5, 23); // 28
+    }
+
+    static void sum(int x, int y) {
+        int z = x + y;
+        System.out.println(z);
+    }
+}
+</code></pre>
+<p>Поскольку метод <code>sum</code> принимает два значения типа <code>int</code>, то на место параметров надо передать два значения типа <code>int</code>. Это могут быть и числовые литералы, и переменные типов данных, которые представляют тип <code>int</code> или могут быть автоматически преобразованы в тип <code>int</code>. Значения, которые передаются на место параметров, еще называются аргументами. Значения передаются параметрам по позиции, то есть первый аргумент первому параметру, второй аргумент - второму параметру и так далее.</p>
+<p>Рассмотрим другой пример:</p>
+<pre><code class="language-java">public class Program {
+    public static void main (String args[]) {
+        display(&quot;Tom&quot;, 34);
+        display(&quot;Bob&quot;, 28);
+        display(&quot;Sam&quot;, 23);
+    }
+
+    static void display(String name, int age) {
+        System.out.println(name);
+        System.out.println(age);
+    }
+}
+</code></pre>
+<p>Метод <code>display</code> принимает два параметра. Первый параметр представляет тип <code>String</code>, а второй - тип <code>int</code>. Поэтому при вызове метода вначале в него надо передать строку, а затем число.</p>
+<h4 id="_45">Параметры переменной длины</h4>
+<p>Метод может принимать параметры переменной длины одного типа. Например, нам надо передать в метод набор чисел и вычислить их сумму, но мы точно не знаем, сколько именно чисел будет передано - 3, 4, 5 или больше. Параметры переменной длины позволяют решить эту задачу:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String args[]) {
+        sum(1, 2, 3);           // 6
+        sum(1, 2, 3, 4, 5);     // 15
+        sum();                  // 0
+    }
+
+    static void sum(int ...nums) {
+        int result =0;
+        for (int n : nums)
+            result += n;
+        System.out.println(result);
+    }
+}
+</code></pre>
+<p>Троеточие перед названием параметра <code>int ...nums</code> указывает на то, что он будет необязательным и будет представлять массив. Мы можем передать в метод <code>sum</code> одно число, несколько чисел, а можем вообще не передавать никаких параметров. Причем, если мы хотим передать несколько параметров, то необязательный параметр должен указываться в конце:</p>
+<pre><code class="language-java">public static void main(String[] args) {
+    sum(&quot;Welcome!&quot;, 20, 10);
+    sum(&quot;Hello World!&quot;);
+}
+
+static void sum(String message, int ...nums) {
+    System.out.println(message);
+    int result = 0;
+    for (int x : nums)
+        result += x;
+    System.out.println(result);
+}
+</code></pre>
+<h3 id="return">Оператор return</h3>
+<p>Методы могут возвращать некоторое значение. Для этого применяется оператор <code>return</code>.</p>
+<pre><code class="language-java">return возвращаемое_значение;
+</code></pre>
+<p>После оператора <code>return</code> указывается возвращаемое значение, которое является результатом метода. Это может быть литеральное значение, значение переменной или какого-то сложного выражения.</p>
+<p>Например:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String args[]) {
+        int x = sum(1, 2, 3);
+        int y = sum(1, 4, 9);
+        System.out.println(x);  // 6
+        System.out.println(y);  // 14
+    }
+
+    static int sum(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+</code></pre>
+<p>В методе в качестве типа возвращаемого значения вместо <code>void</code> используется любой другой тип. В данном случае метод <code>sum</code> возвращает значение типа <code>int</code>, поэтому этот тип указывается перед названием метода. Причем если в качестве возвращаемого типа для метода определен любой другой, отличный от <code>void</code>, то метод обязательно должен использовать оператор <code>return</code> для возвращения значения.</p>
+<p>При этом возвращаемое значение всегда должно иметь тот же тип, что значится в определении функции. И если функция возвращает значение типа <code>int</code>, то после оператора <code>return</code> стоит целочисленное значение, которое является объектом типа <code>int</code>. Как в данном случае это сумма значений параметров метода.</p>
+<p>Метод может использовать несколько вызовов оператора <code>return</code> для возвращения разных значений в зависимости от некоторых условий:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String args[]) {
+        System.out.println(daytime(7));     // Good morning
+        System.out.println(daytime(13));    // Good after noon
+        System.out.println(daytime(18));    // Good evening
+        System.out.println(daytime(2));     // Good night
+    }
+
+    static String daytime(int hour) {     
+        if (hour &gt;24 || hour &lt; 0)
+            return &quot;Invalid data&quot;;
+        else if (hour &gt; 21 || hour &lt; 6)
+            return &quot;Good night&quot;;
+        else if (hour &gt;= 15)
+            return &quot;Good evening&quot;;
+        else if (hour &gt;= 11)
+            return &quot;Good after noon&quot;;
+        else
+            return &quot;Good morning&quot;;
+    }
+}
+</code></pre>
+<p>Здесь метод <code>daytime</code> возвращает значение типа <code>String</code>, то есть строку, и в зависимости от значения параметра <code>hour</code> возвращаемая строка будет различаться.</p>
+<h4 id="_46">Выход из метода</h4>
+<p>Оператор <code>return</code> применяется не только для возвращения значения из метода, но и для выхода из метода. В подобном качестве оператор <code>return</code> применяется в методах, которые ничего не возвращают, то есть имеют тип возвращаемого значения <code>void</code>:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String args[]) {
+        daytime(7);     // Good morning
+        daytime(13);    // Good after noon
+        daytime(32);    // 
+        daytime(56);    // 
+        daytime(2);     // Good night
+    }
+
+    static void daytime(int hour) {
+        if (hour &gt;24 || hour &lt; 0)
+            return;
+        if (hour &gt; 21 || hour &lt; 6)
+            System.out.println(&quot;Good night&quot;);
+        else if (hour &gt;= 15)
+            System.out.println(&quot;Good evening&quot;);
+        else if (hour &gt;= 11)
+            System.out.println(&quot;Good after noon&quot;);
+        else
+            System.out.println(&quot;Good morning&quot;);
+    }
+}
+</code></pre>
+<p>Если переданное в метод <code>datetime</code> значение больше 24 или меньше 0, то просто выходим из метода. Возвращаемое значение после <code>return</code> указывать в этом случае не нужно.</p>
+<h3 id="_47">Перегрузка методов</h3>
+<p>В программе мы можем использовать методы с одним и тем же именем, но с разными типами и/или количеством параметров. Такой механизм называется перегрузкой методов (method overloading).</p>
+<p>Например:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String[] args) {
+        System.out.println(sum(2, 3));          // 5
+        System.out.println(sum(4.5, 3.2));      // 7.7
+        System.out.println(sum(4, 3, 7));       // 14
+    }
+
+    static int sum(int x, int y) {         
+        return x + y;
+    }
+
+    static double sum(double x, double y) {             
+        return x + y;
+    }
+
+    static int sum(int x, int y, int z) {
+        return x + y + z;
+    }
+}
+</code></pre>
+<p>Здесь определено три варианта или три перегрузки метода <code>sum</code>, но при его вызове в зависимости от типа и количества передаваемых параметров система выберет именно ту версию, которая наиболее подходит.</p>
+<p>Стоит отметить, что на перегрузку методов влияют количество и типы параметров. Однако различие в типе возвращаемого значения для перегрузки не имеют никакого значения. Например, в следующем случае методы различаются по типу возвращаемого значения:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String[] args) {
+        System.out.println(sum(2, 3));
+        System.out.println(sum(4, 3));
+    }
+
+    static int sum(int x, int y) {
+        return x + y;
+    }
+
+    static double sum(int x, int y) {
+        return x + y;
+    }
+}
+</code></pre>
+<p>Однако перегрузкой это не будет считаться. Более того такая программа некорректна и попросту не скомпилируется, так как метод с одним и тем же количеством и типом параметров определен несколько раз.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Drambluker" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

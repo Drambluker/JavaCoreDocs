@@ -1,0 +1,2553 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://drambluker.github.io/JavaCoreDocs/%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BA%D0%B8/4-%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%BD%D0%BE-%D0%BE%D1%80%D0%B8%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B5-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BD%D0%B0-java/">
+      
+      
+        <link rel="prev" href="../3-%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D1%8B-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-%D0%BD%D0%B0-java/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
+    
+    
+      
+        <title>Объектно-ориентированное программирование - Java Core</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#-" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Java Core" class="md-header__button md-logo" aria-label="Java Core" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Java Core
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Объектно-ориентированное программирование
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Drambluker/JavaCoreDocs" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Главная
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../1-%D0%B2%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2-%D1%8F%D0%B7%D1%8B%D0%BA-java/" class="md-tabs__link">
+          
+  
+  Памятки
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Java Core" class="md-nav__button md-logo" aria-label="Java Core" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Java Core
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Drambluker/JavaCoreDocs" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Главная
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Памятки
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Памятки
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1-%D0%B2%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2-%D1%8F%D0%B7%D1%8B%D0%BA-java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Введение в язык Java
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2-%D1%81%D1%80%D0%B5%D0%B4%D0%B0-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-%D0%BD%D0%B0-java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Среда программирования на Java
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D1%8B-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-%D0%BD%D0%B0-java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Основы программирования на Java
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Объектно-ориентированное программирование
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Объектно-ориентированное программирование
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Классы и объекты
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Конструкторы
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#this" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ключевое слово this
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Инициализаторы
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Статические поля и методы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Статические поля и методы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Статические поля
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Статические константы
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Статические инициализаторы
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Статические методы
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Пакеты
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Пакеты">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Статический импорт
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Модификаторы доступа и инкапсуляция
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Модификаторы доступа и инкапсуляция">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Инкапсуляция
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Объекты как параметры методов
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Внутренние и вложенные классы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Внутренние и вложенные классы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Статические вложенные классы
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Перечисления enum
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Перечисления enum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Методы перечислений
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Конструкторы, поля и методы перечисления
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Наследование
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Наследование">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Переопределение методов
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Запрет наследования
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Динамическая диспетчеризация методов
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Класс Object и его методы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Класс Object и его методы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tostring" class="md-nav__link">
+    <span class="md-ellipsis">
+      toString
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Метод equals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hashcode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Метод hashCode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getclass" class="md-nav__link">
+    <span class="md-ellipsis">
+      Получение типа объекта и метод getClass
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Абстрактные классы
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Классы и объекты
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Конструкторы
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#this" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ключевое слово this
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Инициализаторы
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Статические поля и методы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Статические поля и методы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Статические поля
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Статические константы
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Статические инициализаторы
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Статические методы
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Пакеты
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Пакеты">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Статический импорт
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Модификаторы доступа и инкапсуляция
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Модификаторы доступа и инкапсуляция">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Инкапсуляция
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Объекты как параметры методов
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Внутренние и вложенные классы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Внутренние и вложенные классы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Статические вложенные классы
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Перечисления enum
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Перечисления enum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Методы перечислений
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Конструкторы, поля и методы перечисления
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Наследование
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Наследование">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Переопределение методов
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Запрет наследования
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Динамическая диспетчеризация методов
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Класс Object и его методы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Класс Object и его методы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tostring" class="md-nav__link">
+    <span class="md-ellipsis">
+      toString
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Метод equals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hashcode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Метод hashCode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getclass" class="md-nav__link">
+    <span class="md-ellipsis">
+      Получение типа объекта и метод getClass
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Абстрактные классы
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="-">Объектно-ориентированное программирование</h1>
+<h2 id="_1">Классы и объекты</h2>
+<p>Java является объектно-ориентированным языком, поэтому такие понятия как "класс" и "объект" играют в нем ключевую роль. Любую программу на Java можно представить как набор взаимодействующих между собой объектов.</p>
+<p>Шаблоном или описанием объекта является класс, а объект представляет экземпляр этого класса. Можно еще провести следующую аналогию. У нас у всех есть некоторое представление о человеке - наличие двух рук, двух ног, головы, туловища и т.д. Есть некоторый шаблон - этот шаблон можно назвать классом. Реально же существующий человек (фактически экземпляр данного класса) является объектом этого класса.</p>
+<p>Класс определяется с помощью ключевого слова <code>сlass</code>:</p>
+<pre><code class="language-java">class Person {
+    // ...
+}
+</code></pre>
+<p>В данном случае класс называется <code>Person</code>. После названия класса идут фигурные скобки, между которыми помещается тело класса - то есть его поля и методы.</p>
+<p>Любой объект может обладать двумя основными характеристиками: состояние - некоторые данные, которые хранит объект, и поведение - действия, которые может совершать объект.</p>
+<p>Для хранения состояния объекта в классе применяются поля или переменные класса. Для определения поведения объекта в классе применяются методы. Например, класс <code>Person</code>, который представляет человека, мог бы иметь следующее определение:</p>
+<pre><code class="language-java">class Person {
+    String name;        // имя
+    int age;            // возраст
+
+    void displayInfo() {
+        System.out.printf(&quot;Name: %s \tAge: %d\n&quot;, name, age);
+    }
+}
+</code></pre>
+<p>В классе <code>Person</code> определены два поля: <code>name</code> представляет имя человека, а <code>age</code> - его возраст. И также определен метод <code>displayInfo</code>, который ничего не возвращает и просто выводит эти данные в консоль.</p>
+<p>Теперь используем данный класс. Для этого определим следующую программу:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String[] args) {
+        Person tom;
+    }
+}
+
+class Person {
+    String name;    // имя
+    int age;        // возраст
+
+    void displayInfo() {
+        System.out.printf(&quot;Name: %s \tAge: %d\n&quot;, name, age);
+    }
+}
+</code></pre>
+<p>Как правило, классы определяются в разных файлах. В данном случае для простоты мы определяем два класса в одном файле. Стоит отметить, что в этом случае только один класс может иметь модификатор <code>public</code> (в данном случае это класс <code>Program</code>), а сам файл кода должен называться по имени этого класса, то есть в данном случае файл должен называться <code>Program.java</code>.</p>
+<p>Класс представляет новый тип, поэтому мы можем определять переменные, которые представляют данный тип. Так, здесь в методе <code>main</code> определена переменная <code>tom</code>, которая представляет класс <code>Person</code>. Но пока эта переменная не указывает ни на какой объект и по умолчанию она имеет значение <code>null</code>. По большому счету ее пока нельзя использовать, поэтому вначале необходимо создать объект класса <code>Person</code>.</p>
+<h2 id="_2">Конструкторы</h2>
+<p>Кроме обычных методов классы могут определять специальные методы, которые называются конструкторами. Конструкторы вызываются при создании нового объекта данного класса. Конструкторы выполняют инициализацию объекта.</p>
+<p>Если в классе не определено ни одного конструктора, то для этого класса автоматически создается конструктор без параметров.</p>
+<p>Выше определенный класс <code>Person</code> не имеет никаких конструкторов. Поэтому для него автоматически создается конструктор по умолчанию, который можно использовать для создания объекта <code>Person</code>. В частности, создадим один объект:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String[] args) {     
+        Person tom = new Person(); // создание объекта
+        tom.displayInfo();
+
+        // изменяем имя и возраст
+        tom.name = &quot;Tom&quot;;
+        tom.age = 34;
+        tom.displayInfo();
+    }
+}
+
+class Person {
+    String name;    // имя
+    int age;        // возраст
+
+    void displayInfo() {
+        System.out.printf(&quot;Name: %s \tAge: %d\n&quot;, name, age);
+    }
+}
+</code></pre>
+<p>Для создания объекта <code>Person</code> используется выражение <code>new Person()</code>. Оператор <code>new</code> выделяет память для объекта <code>Person</code>. И затем вызывается конструктор по умолчанию, который не принимает никаких параметров. В итоге после выполнения данного выражения в памяти будет выделен участок, где будут храниться все данные объекта <code>Person</code>. А переменная <code>tom</code> получит ссылку на созданный объект.</p>
+<p>Если конструктор не инициализирует значения переменных объекта, то они получают значения по умолчанию. Для переменных числовых типов это число <code>0</code>, а для типа <code>String</code> и классов - это значение <code>null</code> (то есть фактически отсутствие значения).</p>
+<p>После создания объекта мы можем обратиться к переменным объекта <code>Person</code> через переменную <code>tom</code> и установить или получить их значения, например, <code>tom.name = "Tom"</code>.</p>
+<p>В итоге мы увидим в консоли:</p>
+<pre><code>Name: null      Age: 0
+Name: Tom       Age: 34
+</code></pre>
+<p>Если необходимо, чтобы при создании объекта производилась какая-то логика, например, чтобы поля класса получали какие-то определенные значения, то можно определить в классе свои конструкторы. Например:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String[] args) {
+        Person bob = new Person();          // вызов первого конструктора без параметров
+        bob.displayInfo();
+
+        Person tom = new Person(&quot;Tom&quot;);     // вызов второго конструктора с одним параметром
+        tom.displayInfo();
+
+        Person sam = new Person(&quot;Sam&quot;, 25); // вызов третьего конструктора с двумя параметрами
+        sam.displayInfo();
+    }
+}
+
+class Person{
+    String name;    // имя
+    int age;        // возраст
+
+    Person() {
+        name = &quot;Undefined&quot;;
+        age = 18;
+    }
+
+    Person(String n) {
+        name = n;
+        age = 18;
+    }
+
+    Person(String n, int a) {
+        name = n;
+        age = a;
+    }
+
+    void displayInfo() {
+        System.out.printf(&quot;Name: %s \tAge: %d\n&quot;, name, age);
+    }
+}
+</code></pre>
+<p>Теперь в классе определено три конструктора, каждый из которых принимает различное количество параметров и устанавливает значения полей класса.</p>
+<p>Консольный вывод программы:</p>
+<pre><code>Name: Undefined     Age: 18
+Name: Tom       Age: 18
+Name: Sam       Age: 25
+</code></pre>
+<h2 id="this">Ключевое слово this</h2>
+<p>Ключевое слово this представляет ссылку на текущий экземпляр класса. Через это ключевое слово мы можем обращаться к переменным, методам объекта, а также вызывать его конструкторы. Например:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String[] args) {         
+        Person undef = new Person();
+        undef.displayInfo();
+
+        Person tom = new Person(&quot;Tom&quot;);
+        tom.displayInfo();
+
+        Person sam = new Person(&quot;Sam&quot;, 25);
+        sam.displayInfo();
+    }
+}
+
+class Person {
+    String name;    // имя
+    int age;        // возраст
+
+    Person() {
+        this(&quot;Undefined&quot;, 18);
+    }
+
+    Person(String name) {
+        this(name, 18);
+    }
+
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    void displayInfo() {
+        System.out.printf(&quot;Name: %s \tAge: %d\n&quot;, name, age);
+    }
+}
+</code></pre>
+<p>В третьем конструкторе параметры называются так же, как и поля класса. И чтобы разграничить поля и параметры, применяется ключевое слово <code>this</code>:</p>
+<pre><code class="language-java">this.name = name;
+</code></pre>
+<p>Так, в данном случае указываем, что значение параметра <code>name</code> присваивается полю <code>name</code>.</p>
+<p>Кроме того, у нас три конструктора, которые выполняют идентичные действия: устанавливают поля <code>name</code> и <code>age</code>. Чтобы избежать повторов, с помощью <code>this</code> можно вызвать один из конструкторов класса и передать для его параметров необходимые значения:</p>
+<pre><code class="language-java">Person(String name) {
+    this(name, 18);
+}
+</code></pre>
+<p>В итоге результат программы будет тот же, что и в предыдущем примере.</p>
+<h2 id="_3">Инициализаторы</h2>
+<p>Кроме конструктора начальную инициализацию объекта вполне можно было проводить с помощью инициализатора объекта. Инициализатор выполняется до любого конструктора. То есть в инициализатор мы можем поместить код, общий для всех конструкторов:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String[] args) {
+        Person undef = new Person();
+        undef.displayInfo();
+
+        Person tom = new Person(&quot;Tom&quot;);
+        tom.displayInfo();
+    }
+}
+
+class Person {
+    String name;    // имя
+    int age;        // возраст
+
+    /*начало блока инициализатора*/
+    {
+        name = &quot;Undefined&quot;;
+        age = 18;
+    }
+    /*конец блока инициализатора*/
+
+    Person() {}
+
+    Person(String name) {
+        this.name = name;
+    }
+
+    Person(String name, int age) { 
+        this.name = name;
+        this.age = age;
+    }
+
+    void displayInfo() {
+        System.out.printf(&quot;Name: %s \tAge: %d\n&quot;, name, age);
+    }
+}
+</code></pre>
+<p>Консольный вывод:</p>
+<pre><code>Name: Undefined     Age: 18
+Name: Tom       Age: 18
+</code></pre>
+<h2 id="_4">Статические поля и методы</h2>
+<p>Кроме обычных методов и полей класс может иметь статические поля, методы, константы и инициализаторы. Например, главный класс программы имеет метод <code>main</code>, который является статическим:</p>
+<pre><code class="language-java">public static void main(String[] args) {}
+</code></pre>
+<p>Для объявления статических переменных, констант, методов и инициализаторов перед их объявлением указывается ключевое слово <code>static</code>.</p>
+<h3 id="_5">Статические поля</h3>
+<p>При создании объектов класса для каждого объекта создается своя копия нестатических обычных полей. А статические поля являются общими для всего класса. Поэтому они могут использоваться без создания объектов класса.</p>
+<p>Например, создадим статическую переменную:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String[] args) {
+        Person tom = new Person();
+        Person bob = new Person();
+
+        tom.displayId();                    // Id = 1
+        bob.displayId();                    // Id = 2
+        System.out.println(Person.counter); // 3
+
+        // изменяем Person.counter
+        Person.counter = 8;
+
+        Person sam = new Person();
+        sam.displayId();                    // Id = 8
+    }
+}
+
+class Person {
+    private int id;
+    static int counter = 1;
+
+    Person() {
+        id = counter++;
+    }
+
+    public void displayId() {
+        System.out.printf(&quot;Id: %d \n&quot;, id);
+    }
+}
+</code></pre>
+<p>Класс <code>Person</code> содержит статическую переменную <code>counter</code>, которая увеличивается в конструкторе и ее значение присваивается переменной <code>id</code>. То есть при создании каждого нового объекта <code>Person</code> эта переменная будет увеличиваться, поэтому у каждого нового объекта <code>Person</code> значение поля <code>id</code> будет на 1 больше чем у предыдущего.</p>
+<p>Так как переменная <code>counter</code> статическая, то мы можем обратиться к ней в программе по имени класса:</p>
+<pre><code class="language-java">System.out.println(Person.counter); // получаем значение
+Person.counter = 8;                 // изменяем значение
+</code></pre>
+<p>Консольный вывод программы:</p>
+<pre><code class="language-java">Id = 1
+Id = 2
+3
+Id = 8
+</code></pre>
+<h3 id="_6">Статические константы</h3>
+<p>Также статическими бывают константы, которые являются общими для всего класса.</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String[] args) {
+        double radius = 60;
+        System.out.printf(&quot;Radisu: %f \n&quot;, radius);             // 60
+        System.out.printf(&quot;Area: %f \n&quot;, Math.PI * radius);     // 188,4
+    }
+}
+
+class Math {
+    public static final double PI = 3.14;
+}
+</code></pre>
+<p>Стоит отметить, что на протяжении всех предыдущих тем уже активно использовались статические константы. В частности, в выражении:</p>
+<pre><code class="language-java">System.out.println(&quot;hello&quot;);
+</code></pre>
+<p><code>out</code> как раз представляет статическую константу класса <code>System</code>. Поэтому обращение к ней идет без создания объекта класса <code>System</code>.</p>
+<h3 id="_7">Статические инициализаторы</h3>
+<p>Статические инициализаторы предназначены для инициализации статических переменных, либо для выполнения таких действий, которые выполняются при создании самого первого объекта. Например, определим статический инициализатор:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String[] args) {
+        Person tom = new Person();
+        Person bob = new Person();
+
+        tom.displayId();    // Id = 105
+        bob.displayId();    // Id = 106
+    }
+}
+
+class Person {
+    private int id;
+
+    static int counter;
+
+    static {
+        counter = 105;
+        System.out.println(&quot;Static initializer&quot;);
+    }
+
+    Person() {
+        id = counter++;
+        System.out.println(&quot;Constructor&quot;);
+    }
+
+    public void displayId() {     
+        System.out.printf(&quot;Id: %d \n&quot;, id);
+    }
+}
+</code></pre>
+<p>Статический инициализатор определяется как обычный, только перед ним ставится ключевое слово <code>static</code>. В данном случае в статическом инициализаторе мы устанавливаем начальное значение статического поля <code>counter</code> и выводим на консоль сообщение.</p>
+<p>В самой программе создаются два объекта класса <code>Person</code>. Поэтому консольный вывод будет выглядеть следующим образом:</p>
+<pre><code>Static initializer
+Constructor
+Constructor
+Id: 105
+Id: 106
+</code></pre>
+<p>Стоит учитывать, что вызов статического инициализатора производится после загрузки класса и фактически до создания самого первого объекта класса.</p>
+<h3 id="_8">Статические методы</h3>
+<p>Статические методы также относятся ко всему классу в целом. Например, в примере выше статическая переменная <code>counter</code> была доступна извне, и мы могли изменить ее значение вне класса <code>Perso</code>n. Сделаем ее недоступной для изменения извне, но доступной для чтения. Для этого используем статический метод:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String[] args) {
+        Person.displayCounter();    // Counter: 1
+
+        Person tom = new Person();
+        Person bob = new Person();
+
+        Person.displayCounter();    // Counter: 3
+    }
+}
+
+class Person {
+    private int id;
+    private static int counter = 1;
+
+    Person() {
+        id = counter++;
+    }
+
+    // статический метод
+    public static void displayCounter() {     
+        System.out.printf(&quot;Counter: %d \n&quot;, counter);
+    }
+
+    public void displayId() {
+        System.out.printf(&quot;Id: %d \n&quot;, id);
+    }
+}
+</code></pre>
+<p>Теперь статическая переменная недоступна извне, она приватная. А ее значение выводится с помощью статического метода <code>displayCounter</code>. Для обращения к статическому методу используется имя класса: <code>Person.displayCounter()</code>.</p>
+<p>При использовании статических методов надо учитывать ограничения: в статических методах мы можем вызывать только другие статические методы и использовать только статические переменные.</p>
+<p>Вообще методы определяются как статические, когда методы не затрагивают состояние объекта, то есть его нестатические поля и константы, и для вызова метода нет смысла создавать экземпляр класса. Например:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String[] args) {
+        System.out.println(Operation.sum(45, 23));          // 68
+        System.out.println(Operation.subtract(45, 23));     // 22
+        System.out.println(Operation.multiply(4, 23));      // 92
+    }
+}
+
+class Operation {
+    static int sum(int x, int y) {
+        return x + y;
+    }
+
+    static int subtract(int x, int y) {
+        return x - y;
+    }
+
+    static int multiply(int x, int y) {
+        return x * y;
+    }
+}
+</code></pre>
+<p>В данном случае для методов <code>sum</code>, <code>subtract</code>, <code>multiply</code> не имеет значения, какой именно экземпляр класса <code>Operation</code> используется. Эти методы работают только с параметрами, не затрагивая состояние класса. Поэтому их можно определить как статические.</p>
+<h2 id="_9">Пакеты</h2>
+<p>Как правило, в Java классы объединяются в пакеты. Пакеты позволяют организовать классы логически в наборы. По умолчанию Java уже имеет ряд встроенных пакетов, например, <code>java.lang</code>, <code>java.util</code>, <code>java.io</code> и т.д. Кроме того, пакеты могут иметь вложенные пакеты.</p>
+<p>Организация классов в виде пакетов позволяет избежать конфликта имен между классами. Ведь нередки ситуации, когда разработчики называют свои классы одинаковыми именами. Принадлежность к пакету позволяет гарантировать однозначность имен.</p>
+<p>Чтобы указать, что класс принадлежит определенному пакету, надо использовать директиву package, после которой указывается имя пакета:</p>
+<pre><code class="language-java">package название_пакета;
+</code></pre>
+<p>Как правило, названия пакетов соответствуют физической структуре проекта, то есть организации каталогов, в которых находятся файлы с исходным кодом. А путь к файлам внутри проекта соответствует названию пакета этих файлов. Например, если классы принадлежат пакету <code>mypack</code>, то эти классы помещаются в проекте в папку <code>mypack</code>.</p>
+<p>Классы необязательно определять в пакеты. Если для класса пакет не определен, то считается, что данный класс находится в пакете по умолчанию, который не имеет имени.</p>
+<p>Например, создадим в папке для исходных файлов каталог <code>study</code>. В нем создадим файл <code>Program.java</code> со следующим кодом:</p>
+<pre><code class="language-java">package study;
+
+public class Program {
+    public static void main(String[] args) {
+        Person kate = new Person(&quot;Kate&quot;, 32);
+        kate.displayInfo();
+    }
+}
+
+class Person {
+    String name;
+    int age;
+
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    void displayInfo() {
+        System.out.printf(&quot;Name: %s \t Age: %d \n&quot;, name, age);
+    }
+}
+</code></pre>
+<p>Директива <code>package study</code> в начале файла указывает, что классы <code>Program</code> и <code>Person</code>, которые здесь определены, принадлежат пакету <code>study</code>.</p>
+<p>Когда мы работаем в среде разработки, например, в IntelliJ IDEA, то IDE берет на себя все вопросы компиляции пакетов и входящих в них файлов. Соответственно нам достаточно нажать на кнопку, и все будет готово. Однако если мы компилируем программу в командной строке, то мы можем столкнуться с некоторыми трудностями. Поэтому рассмотрим этот аспект.</p>
+<p>Для компиляции программы вначале в командной строке/терминале перейдем к папке, где находится каталог с исходным кодом, например, каталог study.</p>
+<p>В моём случае это каталог <code>C:\java</code> (то есть файл с исходным кодом расположен по пути <code>C:\java\study\Program.java</code>).</p>
+<p>Для компиляции выполним команду</p>
+<pre><code class="language-bash">javac study\Program.java
+</code></pre>
+<p>После этого в папке study появятся скомпилированные файлы <code>Program.class</code> и <code>Person.class</code>. Для запуска программы выполним команду:</p>
+<pre><code class="language-bash">java study.Program
+````
+
+### Импорт пакетов и классов
+
+Если нам надо использовать классы из других пакетов, то нам надо подключить эти пакеты и классы. Исключение составляют классы из пакета `java.lang` (например, `String`), которые подключаются в программу автоматически.
+
+Например, знакомый по прошлым темам класс `Scanner` находится в пакете `java.util`, поэтому мы можем получить к нему доступ следующим способом:
+
+```java
+java.util.Scanner in = new java.util.Scanner(System.in);
+</code></pre>
+<p>То есть мы указываем полный путь к файлу в пакете при создании его объекта. Однако такое нагромождение имен пакетов не всегда удобно, и в качестве альтернативы мы можем импортировать пакеты и классы в проект с помощью директивы <code>import</code>, которая указывается после директивы <code>package</code>:</p>
+<pre><code class="language-java">package study;
+
+import java.util.Scanner; // импорт класса Scanner
+
+public class Program {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+    }
+}
+</code></pre>
+<p>Директива <code>import</code> указывается в самом начале кода, после чего идет имя подключаемого класса (в данном случае класса <code>Scanner</code>).</p>
+<p>В примере выше мы подключили только один класс, однако пакет <code>java.util</code> содержит еще множество классов. И чтобы не подключать по отдельности каждый класс, мы можем сразу подключить весь пакет:</p>
+<pre><code class="language-java">import java.util.*; // импорт всех классов из пакета java.util
+</code></pre>
+<p>Теперь мы можем использовать любой класс из пакета <code>java.util</code>.</p>
+<p>Возможна ситуация, когда мы используем два класса с одним и тем же названием из двух разных пакетов, например, класс <code>Date</code> имеется и в пакете <code>java.util</code>, и в пакете <code>java.sql</code>. И если нам надо одновременно использовать два этих класса, то необходимо указывать полный путь к этим классам в пакете:</p>
+<pre><code class="language-java">java.util.Date utilDate = new java.util.Date();
+java.sql.Date sqlDate = new java.sql.Date();
+</code></pre>
+<h3 id="_10">Статический импорт</h3>
+<p>В Java есть также особая форма импорта - статический импорт. Для этого вместе с директивой <code>import</code> используется модификатор <code>static</code>:</p>
+<pre><code class="language-java">package study;
+
+import static java.lang.System.*;
+import static java.lang.Math.*;
+
+public class Program {
+    public static void main(String[] args) {
+        double result = sqrt(20);
+        out.println(result);
+    }
+}
+</code></pre>
+<p>Здесь происходит статический импорт классов <code>System</code> и <code>Math</code>. Эти классы имеют статические методы. Благодаря операции статического импорта мы можем использовать эти методы без названия класса. Например, писать не <code>Math.sqrt(20)</code>, а <code>sqrt(20)</code>, так как функция <code>sqrt()</code>, которая возвращает квадратный корень числа, является статической.</p>
+<p>То же самое в отношении класса <code>System</code>: в нем определен статический объект <code>out</code>, поэтому мы можем его использовать без указания класса.</p>
+<h2 id="_11">Модификаторы доступа и инкапсуляция</h2>
+<p>Все члены класса в языке Java - поля и методы - имеют модификаторы доступа. В прошлых темах мы уже сталкивались с модификатором <code>public</code>. Модификаторы доступа позволяют задать допустимую область видимости для членов класса, то есть контекст, в котором можно употреблять данную переменную или метод.</p>
+<p>В Java используются следующие модификаторы доступа:</p>
+<ul>
+<li><code>public</code> - публичный, общедоступный класс или член класса. Поля и методы, объявленные с модификатором <code>public</code>, видны другим классам из текущего пакета и из внешних пакетов.</li>
+<li><code>private</code> - закрытый класс или член класса, противоположность модификатору <code>public</code>. Закрытый класс или член класса доступен только из кода в том же классе.</li>
+<li><code>protected</code> - такой класс или член класса доступен из любого места в текущем классе или пакете или в производных классах, даже если они находятся в других пакетах</li>
+<li>Модификатор по умолчанию. Отсутствие модификатора у поля или метода класса предполагает применение к нему модификатора по умолчанию. Такие поля или методы видны всем классам в текущем пакете.</li>
+</ul>
+<p>Рассмотрим модификаторы доступа на примере следующей программы:</p>
+<pre><code class="language-java">public class Program {
+
+    public static void main(String[] args) {
+
+        Person kate = new Person(&quot;Kate&quot;, 32, &quot;Baker Street&quot;, &quot;+12334567&quot;);
+        kate.displayName();                 // норм, метод public
+        kate.displayAge();                  // норм, метод имеет модификатор по умолчанию
+        kate.displayPhone();                // норм, метод protected
+        //kate.displayAddress();            // ! Ошибка, метод private
+
+        System.out.println(kate.name);      // норм, модификатор по умолчанию
+        System.out.println(kate.address);   // норм, модификатор public
+        System.out.println(kate.age);       // норм, модификатор protected
+        //System.out.println(kate.phone);   // ! Ошибка, модификатор private
+    }
+}
+
+class Person {
+    String name;
+    protected int age;
+    public String address;
+    private String phone;
+
+    public Person(String name, int age, String address, String phone) {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+        this.phone = phone;
+    }
+
+    public void displayName() {
+        System.out.printf(&quot;Name: %s \n&quot;, name);
+    }
+
+    void displayAge() {
+        System.out.printf(&quot;Age: %d \n&quot;, age);
+    }
+
+    private void displayAddress() {
+        System.out.printf(&quot;Address: %s \n&quot;, address);
+    }
+
+    protected void displayPhone() {
+        System.out.printf(&quot;Phone: %s \n&quot;, phone);
+    }
+}
+</code></pre>
+<p>В данном случае оба класса расположены в одном пакете - пакете по умолчанию, поэтому в классе <code>Program</code> мы можем использовать все методы и переменные класса <code>Person</code>, которые имеют модификатор по умолчанию, <code>public</code> и <code>protected</code>. А поля и методы с модификатором <code>private</code> в классе <code>Program</code> не будут доступны.</p>
+<p>Если бы класс <code>Program</code> располагался в другом пакете, то ему были бы доступны только поля и методы с модификатором <code>public</code>.</p>
+<p>Модификатор доступа должен предшествовать остальной части определения переменной или метода.</p>
+<h3 id="_12">Инкапсуляция</h3>
+<p>Казалось бы, почему бы не объявить все переменные и методы с модификатором <code>public</code>, чтобы они были доступны в любой точке программы вне зависимости от пакета или класса? Возьмем, например, поле <code>age</code>, которое представляет возраст. Если другой класс имеет прямой доступ к этому полю, то есть вероятность, что в процессе работы программы ему будет передано некорректное значение, например, отрицательное число. Подобное изменение данных не является желательным. Либо же мы хотим, чтобы некоторые данные были достуны напрямую, чтобы их можно было вывести на консоль или просто узнать их значение. Поэтому рекомендуется как можно больше ограничивать доступ к данным, чтобы защитить их от нежелательного доступа извне (как для получения значения, так и для его изменения). Использование различных модификаторов гарантирует, что данные не будут искажены или изменены не надлежащим образом. Подобное сокрытие данных внутри некоторой области видимости называется инкапсуляцией.</p>
+<p>Так, как правило, вместо непосредственного применения полей используют методы доступа. Например:</p>
+<pre><code class="language-java">public class Program {
+
+    public static void main(String[] args) {
+        Person kate = new Person(&quot;Kate&quot;, 30);
+        System.out.println(kate.getAge());      // 30
+        kate.setAge(33);
+        System.out.println(kate.getAge());      // 33
+        kate.setAge(123450);
+        System.out.println(kate.getAge());      // 33
+    }
+}
+
+class Person {
+    private String name;
+    private int age = 1;
+
+    public Person(String name, int age) {
+        setName(name);
+        setAge(age);
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return this.age;
+    }
+
+    public void setAge(int age) {
+        if (age &gt; 0 &amp;&amp; age &lt; 110)
+            this.age = age;
+    }
+}
+</code></pre>
+<p>И затем вместо непосредственной работы с полями <code>name</code> и <code>age</code> в классе <code>Person</code> мы будем работать с методами, которые устанавливают и возвращают значения этих полей. Методы <code>setName</code>, <code>setAge</code> и наподобие еще называют мьютейтерами (mutator), так как они изменяют значения поля. А методы <code>getName</code>, <code>getAge</code> и наподобие называют аксессерами (accessor), так как с их помощью мы получаем значение поля.</p>
+<p>Причем в эти методы мы можем вложить дополнительную логику. Например, в данном случае при изменении возраста производится проверка, насколько соответствует новое значение допустимому диапазону.</p>
+<h2 id="_13">Объекты как параметры методов</h2>
+<p>Объекты классов, как и данные примитивных типов, могут передаваться в методы. Однако в данном случае есть одна особенность - при передаче объектов в качестве значения передается копия ссылки на область в памяти, где расположен этот объект. Рассмотрим небольшой пример. Пусть у нас есть следующий класс <code>Person</code>:</p>
+<pre><code class="language-java">public class Program {
+
+    public static void main(String[] args) {
+        Person kate = new Person(&quot;Kate&quot;);
+        System.out.println(kate.getName());     // Kate
+        changeName(kate);
+        System.out.println(kate.getName());     // Alice
+    }
+
+    static void changeName(Person p){
+        p.setName(&quot;Alice&quot;);
+    }
+}
+
+class Person {
+
+    private String name;
+
+    Person(String name) {
+        this.name = name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+}
+</code></pre>
+<p>Здесь в метод <code>changeName</code> передается объект <code>Person</code>, у которого изменяется имя. Так как в метод будет передаваться копия ссылки на область памяти, в которой находится объект <code>Person</code>, то переменная <code>kate</code> и параметр <code>p</code> метода <code>changeName</code> будут указывать на один и тот же объект в памяти. Поэтому после выполнения метода у объекта <code>kate</code>, который передается в метод, будет изменено имя с <code>"Kate"</code> на <code>"Alice"</code>.</p>
+<p>От этого случая следует отличать другой случай:</p>
+<pre><code class="language-java">public class Program {
+
+    public static void main(String[] args) {
+        Person kate = new Person(&quot;Kate&quot;);
+        System.out.println(kate.getName());     // Kate
+        changePerson(kate);
+        System.out.println(kate.getName());     // Kate - изменения не произошло
+                                                // kate хранит ссылку на старый объект
+    }
+
+    static void changePerson(Person p) {
+        p = new Person(&quot;Alice&quot;);    // p указывает на новый объект
+        p.setName(&quot;Ann&quot;);
+    }
+
+    static void changeName(Person p) {
+        p.setName(&quot;Alice&quot;);
+    }
+}
+
+class Person {
+
+    private String name;
+
+    Person(String name) {
+        this.name = name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+}
+</code></pre>
+<p>В метод <code>changePerson</code> также передается копия ссылки на объект <code>Person</code>. Однако в самом методе мы изменяем не отдельные значения объекта, а пересоздаем объект с помощью конструктора и оператора <code>new</code>. В результате в памяти будет выделено новое место для нового объекта <code>Person</code>, и ссылка на этот объект будет присвоена параметру <code>p</code>:</p>
+<pre><code class="language-java">static void changePerson(Person p) {
+    p = new Person(&quot;Alice&quot;);    // p указывает на новый объект
+    p.setName(&quot;Ann&quot;);           // изменяется новый объект
+}
+</code></pre>
+<p>То есть после создания нового объекта <code>Person</code> параметр <code>p</code> и переменная <code>kate</code> в методе <code>main</code> будут хранить ссылки на разные объекты. Переменная <code>kate</code>, которая передавалась в метод, продолжит хранить ссылку на старый объект в памяти. Поэтому её значение не меняется.</p>
+<h2 id="_14">Внутренние и вложенные классы</h2>
+<p>Классы могут быть вложенными (nested), то есть могут быть определены внутри других классов. Частным случаем вложенных классов являются внутренние классы (inner class). Например, имеется класс <code>Person</code>, внутри которого определен класс <code>Account</code>:</p>
+<pre><code class="language-java">public class Program {
+
+    public static void main(String[] args) {
+        Person tom = new Person(&quot;Tom&quot;, &quot;qwerty&quot;);
+        tom.displayPerson();
+        tom.account.displayAccount();
+    }
+}
+
+class Person {
+
+    private String name;
+    Account account;
+
+    Person(String name, String password) {
+        this.name = name;
+        account = new Account(password);
+    }
+
+    public void displayPerson() {
+        System.out.printf(&quot;Person \t Name: %s \t Password: %s \n&quot;, name, account.password);
+    }
+
+    public class Account {
+        private String password;
+
+        Account(String pass) {
+            this.password = pass;
+        }
+
+        void displayAccount() {
+            System.out.printf(&quot;Account Login: %s \t Password: %s \n&quot;, Person.this.name, password);
+        }
+    }
+}
+</code></pre>
+<p>Внутренний класс ведет себя как обычный класс за тем исключением, что его объекты могут быть созданы только внутри внешнего класса.</p>
+<p>Внутренний класс имеет доступ ко всем полям внешнего класса, в том числе закрытым с помощью модификатора <code>private</code>. Аналогично внешний класс имеет доступ ко всем членам внутреннего класса, в том числе к полям и методам с модификатором <code>private</code>.</p>
+<p>Ссылку на объект внешнего класса из внутреннего класса можно получить с помощью выражения <code>Внешний_Класс.this</code>, например, <code>Person.this</code>.</p>
+<p>Объекты внутренних классов могут быть созданы только в том классе, в котором внутренние классы опеределены. В других внешних классах объекты внутреннего класса создать нельзя.</p>
+<p>Еще одной особенностью внутренних классов является то, что их можно объявить внутри любого контекста, в том числе внутри метода и даже в цикле:</p>
+<pre><code class="language-java">public class Program{
+
+    public static void main(String[] args) {
+        Person tom = new Person(&quot;Tom&quot;);
+        tom.setAccount(&quot;qwerty&quot;);
+    }
+}
+
+class Person {
+
+    private String name;
+
+    Person(String name) {
+        this.name = name;
+    }
+
+    public void setAccount(String password) {
+
+        class Account {
+            void display() {
+                System.out.printf(&quot;Account Login: %s \t Password: %s \n&quot;, name, password);
+            }
+        }
+
+        Account account = new Account();
+        account.display();
+    }
+}
+</code></pre>
+<h3 id="_15">Статические вложенные классы</h3>
+<p>Кроме внутренних классов также могут быть статические вложенные классы. Статические вложенные классы позволяют скрыть некоторую комплексную, или другими словами составную, информацию внутри внешнего класса:</p>
+<pre><code class="language-java">class Math {
+
+    public static class Factorial {
+
+        private int result;
+        private int key;
+
+        public Factorial(int number, int x) {
+            result = number;
+            key = x;
+        }
+
+        public int getResult() {
+            return result;
+        }
+
+        public int getKey() {
+            return key;
+        }
+    }
+
+    public static Factorial getFactorial(int x) {
+        int result = 1;
+        for (int i = 1; i &lt;= x; i++) {
+            result *= i;
+        }
+        return new Factorial(result, x);
+    }
+}
+</code></pre>
+<p>Здесь определен вложенный класс для хранения данных о вычислении факториала. Основные действия выполняет метод <code>getFactorial</code>, который возвращает объект вложенного класса. И теперь используем классы в методе <code>main</code>:</p>
+<pre><code class="language-java">public static void main(String[] args) {
+    Math.Factorial fact = Math.getFactorial(6);
+    System.out.printf(&quot;Факториал числа %d равен %d \n&quot;, fact.getKey(), fact.getResult());
+}
+</code></pre>
+<h2 id="enum">Перечисления enum</h2>
+<p>Кроме отдельных примитивных типов данных и классов в Java есть такой тип как <code>enum</code> или перечисление. Перечисления представляют набор логически связанных констант. Объявление перечисления происходит с помощью оператора <code>enum</code>, после которого идет название перечисления. Затем идет список элементов перечисления через запятую:</p>
+<pre><code class="language-java">enum Day {
+    MONDAY,
+    TUESDAY,
+    WEDNESDAY,
+    THURSDAY,
+    FRIDAY,
+    SATURDAY,
+    SUNDAY
+}
+</code></pre>
+<p>Перечисление фактически представляет новый тип, поэтому мы можем определить переменную данного типа и использовать её:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String[] args) {
+        Day current = Day.MONDAY;
+        System.out.println(current);    // MONDAY
+    }
+}
+
+enum Day {
+    MONDAY,
+    TUESDAY,
+    WEDNESDAY,
+    THURSDAY,
+    FRIDAY,
+    SATURDAY,
+    SUNDAY
+}
+</code></pre>
+<p>Перечисления могут использоваться в классах для хранения данных:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String[] args) {
+        Book b1 = new Book(&quot;War and Peace&quot;, &quot;L. Tolstoy&quot;, Type.BELLETRE);
+        System.out.printf(&quot;Book '%s' has a type %s \n&quot;, b1.name, b1.getType());
+    }
+}
+
+class Book {
+    private Type bookType;
+    String name;
+    String author;
+
+    Book(String name, String author, Type type) {
+        this.bookType = type;
+        this.name = name;
+        this.author = author;
+    }
+
+    String getType() {
+        switch (bookType) {
+            case BELLETRE: return &quot;Belletre&quot;;
+            case SCIENCE: return &quot;Science&quot;;
+            case SCIENCE_FICTION: return &quot;Science fiction&quot;; 
+            case PHANTASY: return &quot;Phantasy&quot;;
+            default: return &quot;Undefined&quot;;
+        }
+    }
+}
+
+enum Type {
+    SCIENCE,
+    BELLETRE,
+    PHANTASY,
+    SCIENCE_FICTION
+}
+</code></pre>
+<p>Само перечисление объявлено вне класса, оно содержит четыре жанра книг. Класс <code>Book</code> кроме обычных переменных содержит также переменную типа нашего перечисления. В конструкторе мы ее также можем присвоить, как и обычные поля класса.</p>
+<p>С помощью конструкции <code>switch</code>/<code>case</code> можно проверить принадлежность значения <code>bookType</code> определенной константе перечисления. Пример работы программы:</p>
+<pre><code>Book 'War and Peace' has a type Belletre
+</code></pre>
+<h3 id="_16">Методы перечислений</h3>
+<p>Каждое перечисление имеет статический метод <code>values()</code>. Он возвращает массив всех констант перечисления:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String[] args) {
+        Type[] types = Type.values();
+        for (Type s : types) {
+            System.out.println(s);
+        }
+    }
+}
+
+enum Type {
+    SCIENCE,
+    BELLETRE,
+    PHANTASY,
+    SCIENCE_FICTION
+}
+</code></pre>
+<p>Метод <code>ordinal()</code> возвращает порядковый номер определенной константы (нумерация начинается с 0):</p>
+<pre><code class="language-java">System.out.println(Type.BELLETRE.ordinal());    // 1
+</code></pre>
+<h3 id="_17">Конструкторы, поля и методы перечисления</h3>
+<p>Перечисления, как и обычные классы, могут определять конструкторы, поля и методы. Например:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String[] args) {
+        System.out.println(Color.RED.getCode());        // #FF0000
+        System.out.println(Color.GREEN.getCode());      // #00FF00    
+    }
+}
+
+enum Color {
+    RED(&quot;#FF0000&quot;), BLUE(&quot;#0000FF&quot;), GREEN(&quot;#00FF00&quot;);
+
+    private String code;
+
+    Color(String code) {
+        this.code = code;
+    }
+
+    public String getCode() {
+        return code;
+    }
+}
+</code></pre>
+<p>Перечисление <code>Color</code> определяет приватное поле <code>code</code> для хранения кода цвета, а с помощью метода <code>getCode()</code> оно возвращается. Через конструктор передается для него значение. Следует отметить, что конструктор по умолчанию приватный, то есть имеет модификатор <code>private</code>. Любой другой модификатор будет считаться ошибкой. Поэтому создать константы перечисления с помощью конструктора мы можем только внутри перечисления.</p>
+<p>Также можно определять методы для отдельных констант:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String[] args) {
+        Operation op = Operation.SUM;
+        System.out.println(op.action(10, 4));   // 14
+        op = Operation.MULTIPLY;
+        System.out.println(op.action(6, 4));    // 24
+    }
+}
+
+enum Operation {
+    SUM {
+        public int action(int x, int y) {
+            return x + y;
+        }
+    },
+    SUBTRACT {
+        public int action(int x, int y) {
+            return x - y;
+        }
+    },
+    MULTIPLY {
+        public int action(int x, int y) {
+            return x * y;
+        }
+    };
+
+    public abstract int action(int x, int y);
+}
+</code></pre>
+<h2 id="_18">Наследование</h2>
+<p>Одним из ключевых аспектов объектно-ориентированного программирования является наследование. С помощью наследования можно расширить функционал уже имеющихся классов за счет добавления нового функционала или изменения старого. Например, имеется следующий класс <code>Person</code>, описывающий отдельного человека:</p>
+<pre><code class="language-java">class Person {
+
+    String name;
+    public String getName() {
+        return name;
+    }
+
+    public Person(String name) {
+        this.name=name;
+    }
+
+    public void display() {
+        System.out.println(&quot;Name: &quot; + name);
+    }
+}
+</code></pre>
+<p>И, возможно, впоследствии мы захотим добавить еще один класс, который описывает сотрудника предприятия - класс <code>Employee.</code> Так как этот класс реализует тот же функционал, что и класс <code>Person</code>, поскольку сотрудник - это также и человек, то было бы рационально сделать класс <code>Employee</code> производным (наследником, подклассом) от класса <code>Person</code>, который, в свою очередь, называется базовым классом, родителем или супер-классом:</p>
+<pre><code class="language-java">class Employee extends Person {
+    public Employee(String name) {
+        super(name); // если базовый класс определяет конструктор
+                     // то производный класс должен его вызвать
+    }
+}
+</code></pre>
+<p>Чтобы объявить один класс наследником от другого, надо использовать после имени класса-наследника ключевое слово <code>extends</code>, после которого идет имя базового класса. Для класса <code>Employee</code> базовым является <code>Person</code>, и поэтому класс <code>Employee</code> наследует все те же поля и методы, которые есть в классе <code>Person</code>.</p>
+<p>Если в базовом классе определены конструкторы, то в конструкторе производного класса необходимо вызвать один из конструкторов базового класса с помощью ключевого слова <code>super</code>. Например, класс <code>Person</code> имеет конструктор, который принимает один параметр. Поэтому в классе <code>Employee</code> в конструкторе нужно вызвать конструктор класса <code>Person</code>. То есть вызов <code>super(name)</code> будет представлять вызов конструктора класса <code>Person</code>.</p>
+<p>При вызове конструктора после слова <code>super</code> в скобках идет перечисление передаваемых аргументов. При этом вызов конструктора базового класса должен идти в самом начале в конструкторе производного класса. Таким образом, установка имени сотрудника делегируется конструктору базового класса.</p>
+<p>Причем даже если производный класс никакой другой работы не производит в конструкторе, как в примере выше, все равно необходимо вызвать конструктор базового класса.</p>
+<p>Использование классов:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String[] args) {
+        Person tom = new Person(&quot;Tom&quot;);
+        tom.display();
+        Employee sam = new Employee(&quot;Sam&quot;);
+        sam.display();
+    }
+}
+
+class Person {
+
+    String name;
+    public String getName() {
+        return name;
+    }
+
+    public Person(String name) {
+        this.name = name;
+    }
+
+    public void display() {
+        System.out.println(&quot;Name: &quot; + name);
+    }
+}
+
+class Employee extends Person {
+    public Employee(String name) {
+        super(name); // если базовый класс определяет конструктор
+                     // то производный класс должен его вызвать
+    }
+}
+</code></pre>
+<p>Производный класс имеет доступ ко всем методам и полям базового класса (даже если базовый класс находится в другом пакете) кроме тех, которые определены с модификатором <code>private</code>. При этом производный класс также может добавлять свои поля и методы:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String[] args) {
+        Employee sam = new Employee(&quot;Sam&quot;, &quot;Microsoft&quot;);
+        sam.display();  // Sam
+        sam.work();     // Sam works in Microsoft
+    }
+}
+
+class Person {
+
+    String name;
+    public String getName() {
+        return name;
+    }
+
+    public Person(String name) {
+        this.name=name;
+    }
+
+    public void display(){
+
+        System.out.println(&quot;Name: &quot; + name);
+    }
+}
+class Employee extends Person{
+
+    String company;
+
+    public Employee(String name, String company) {
+
+        super(name);
+        this.company=company;
+    }
+    public void work(){
+        System.out.printf(&quot;%s works in %s \n&quot;, getName(), company);
+    }
+}
+</code></pre>
+<p>В данном случае класс <code>Employee</code> добавляет поле <code>company</code>, которое хранит место работы сотрудника, а также метод <code>work</code>.</p>
+<h3 id="_19">Переопределение методов</h3>
+<p>Производный класс может определять свои методы, а может переопределять методы, которые унаследованы от базового класса. Например, переопределим в классе <code>Employee</code> метод <code>display</code>:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String[] args) {
+        Employee sam = new Employee(&quot;Sam&quot;, &quot;Microsoft&quot;);
+        sam.display(); // Sam
+                       // Works in Microsoft
+    }
+}
+
+class Person {
+
+    String name;
+    public String getName() {
+        return name;
+    }
+
+    public Person(String name) {
+        this.name = name;
+    }
+
+    public void display() {
+        System.out.println(&quot;Name: &quot; + name);
+    }
+}
+
+class Employee extends Person {
+
+    String company;
+
+    public Employee(String name, String company) {
+        super(name);
+        this.company=company;
+    }
+
+    @Override
+    public void display() {
+        System.out.printf(&quot;Name: %s \n&quot;, getName());
+        System.out.printf(&quot;Works in %s \n&quot;, company);
+    }
+}
+</code></pre>
+<p>Перед переопределяемым методом указывается аннотация <code>@Override</code>. Данная аннотация в принципе необязательна.</p>
+<p>При переопределении метода он должен иметь уровень доступа не меньше, чем уровень доступа в базовом классе. Например, если в базовом классе метод имеет модификатор <code>public</code>, то и в производном классе метод должен иметь модификатор <code>public</code>.</p>
+<p>Однако в данном случае мы видим, что часть метода <code>display</code> в <code>Employee</code> повторяет действия из метода <code>display</code> базового класса. Поэтому мы можем сократить класс <code>Employee</code>:</p>
+<pre><code class="language-java">class Employee extends Person {
+
+    String company;
+
+    public Employee(String name, String company) {
+        super(name);
+        this.company=company;
+    }
+
+    @Override
+    public void display() {      
+        super.display();
+        System.out.printf(&quot;Works in %s \n&quot;, company);
+    }
+}
+</code></pre>
+<p>С помощью ключевого слова <code>super</code> мы также можем обратиться к реализации методов базового класса.</p>
+<h3 id="_20">Запрет наследования</h3>
+<p>Хотя наследование очень интересный и эффективный механизм, но в некоторых ситуациях его применение может быть нежелательным. И в этом случае можно запретить наследование с помощью ключевого слова <code>final</code>. Например:</p>
+<pre><code class="language-java">public final class Person {}
+</code></pre>
+<p>Если бы класс <code>Person</code> был бы определен таким образом, то следующий код был бы ошибочным и не сработал, так как мы тем самым запретили наследование:</p>
+<pre><code class="language-java">class Employee extends Person {}
+</code></pre>
+<p>Кроме запрета наследования можно также запретить переопределение отдельных методов. Например, в примере выше переопределен метод <code>display()</code>, запретим его переопределение:</p>
+<pre><code class="language-java">public class Person {
+
+    //........................
+
+    public final void display() {
+        System.out.println(&quot;Имя: &quot; + name);
+    }
+}
+</code></pre>
+<p>В этом случае класс <code>Employee</code> не сможет переопределить метод <code>display</code>.</p>
+<h3 id="_21">Динамическая диспетчеризация методов</h3>
+<p>Наследование и возможность переопределения методов открывают нам большие возможности. Прежде всего мы можем передать переменной супер-класса ссылку на объект подкласса:</p>
+<pre><code class="language-java">Person sam = new Employee(&quot;Sam&quot;, &quot;Oracle&quot;);
+</code></pre>
+<p>Так как <code>Employee</code> наследуется от <code>Person</code>, то объект <code>Employee</code> является в то же время и объектом <code>Person</code>. Грубо говоря, любой работник предприятия одновременно является человеком.</p>
+<p>Однако несмотря на то, что переменная представляет объект <code>Person</code>, виртуальная машина видит, что в реальности она указывает на объект <code>Employee</code>. Поэтому при вызове методов у этого объекта будет вызываться та версия метода, которая определена в классе <code>Employee</code>, а не в <code>Person</code>. Например:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String[] args) {
+        Person tom = new Person(&quot;Tom&quot;);
+        tom.display();
+        Person sam = new Employee(&quot;Sam&quot;, &quot;Oracle&quot;);
+        sam.display();
+    }
+}
+
+class Person {
+
+    String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public Person(String name) {
+        this.name = name;
+    }
+
+    public void display() {
+        System.out.printf(&quot;Person %s \n&quot;, name);
+    }
+}
+
+class Employee extends Person {
+
+    String company;
+
+    public Employee(String name, String company) {
+        super(name);
+        this.company = company;
+    }
+
+    @Override
+    public void display() {
+        System.out.printf(&quot;Employee %s works in %s \n&quot;, super.getName(), company);
+    }
+}
+</code></pre>
+<p>Консольный вывод данной программы:</p>
+<pre><code>Person Tom
+Employee Sam works in Oracle
+</code></pre>
+<p>При вызове переопределенного метода виртуальная машина динамически находит и вызывает именно ту версию метода, которая определена в подклассе. Данный процесс еще называется <strong>dynamic method lookup</strong> или динамический поиск метода или динамическая диспетчеризация методов.</p>
+<h2 id="object">Класс Object и его методы</h2>
+<p>Хотя мы можем создать обычный класс, который не является наследником, но фактически все классы наследуются от класса <code>Object</code>. Все остальные классы, даже те, которые мы добавляем в свой проект, являются неявно производными от класса <code>Object</code>. Поэтому все типы и классы могут реализовать те методы, которые определены в классе <code>Object</code>. Рассмотрим эти методы.</p>
+<h3 id="tostring">toString</h3>
+<p>Метод <code>toString</code> служит для получения представления данного объекта в виде строки. При попытке вывести строковое представления какого-нибудь объекта, как правило, будет выводиться полное имя класса. Например:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String[] args) {
+        Person tom = new Person(&quot;Tom&quot;);
+        System.out.println(tom.toString()); // Будет выводить что-то наподобие Person@7960847b
+    }
+}
+
+class Person {
+
+    private String name;
+
+    public Person(String name) {
+        this.name=name;
+    }
+}
+</code></pre>
+<p>Полученное значение (в данном случае <code>Person@7960847b</code>) вряд ли может служить хорошим строковым описанием объекта. Поэтому метод <code>toString()</code> нередко переопределяют. Например:</p>
+<pre><code class="language-java">public class Program {
+    public static void main(String[] args) {
+        Person tom = new Person(&quot;Tom&quot;);
+        System.out.println(tom.toString()); // Person Tom
+    }
+}
+
+class Person {
+
+    private String name;
+
+    public Person(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return &quot;Person &quot; + name;
+    }
+}
+</code></pre>
+<h3 id="equals">Метод equals</h3>
+<p>Метод <code>equals</code> сравнивает два объекта на равенство:</p>
+<pre><code class="language-java">public class Program {
+
+    public static void main(String[] args) {
+        Person tom = new Person(&quot;Tom&quot;);
+        Person bob = new Person(&quot;Bob&quot;);
+        System.out.println(tom.equals(bob)); // false
+
+        Person tom2 = new Person(&quot;Tom&quot;);
+        System.out.println(tom.equals(tom2)); // true
+    }
+}
+
+class Person {
+
+    private String name;
+
+    public Person(String name) {
+        this.name=name;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Person)) return false;
+
+        Person p = (Person)obj;
+        return this.name.equals(p.name);
+    }
+}
+</code></pre>
+<p>Метод <code>equals</code> принимает в качестве параметра объект любого типа, который мы затем приводим к текущему, если они являются объектами одного класса.</p>
+<p>Оператор <code>instanceof</code> позволяет выяснить, является ли переданный в качестве параметра объект объектом определенного класса, в данном случае класса <code>Person</code>. Если объекты принадлежат к разным классам, то их сравнение не имеет смысла, и возвращается значение <code>false</code>.</p>
+<p>Затем сравниваем по именам. Если они совпадают, возвращаем <code>true</code>, что будет говорить, что объекты равны.</p>
+<h3 id="hashcode">Метод hashCode</h3>
+<p>Метод <code>hashCode</code> позволяет задать некоторое числовое значение, которое будет соответствовать данному объекту, другими словами хэш-код. По данному числу, например, можно сравнивать объекты.</p>
+<p>Например, выведем хэш-код вышеопределенного объекта:</p>
+<pre><code class="language-java">Person tom = new Person(&quot;Tom&quot;);
+System.out.println(tom.hashCode()); // 2036368507
+</code></pre>
+<p>Но мы можем задать свой алгоритм определения хэш-кода объекта:</p>
+<pre><code class="language-java">class Person {
+
+    private String name;
+
+    public Person(String name) {
+        this.name=name;
+    }
+
+    @Override
+    public int hashCode() {
+        return 10 * name.hashCode() + 20456;
+    }
+}
+</code></pre>
+<h3 id="getclass">Получение типа объекта и метод getClass</h3>
+<p>Метод <code>getClass</code> позволяет получить тип данного объекта:</p>
+<pre><code class="language-java">Person tom = new Person(&quot;Tom&quot;);
+System.out.println(tom.getClass()); // class Person
+</code></pre>
+<h2 id="_22">Абстрактные классы</h2>
+<p>Кроме обычных классов в Java есть абстрактные классы. Абстрактный класс похож на обычный класс. В абстрактном классе также можно определить поля и методы, но в то же время нельзя создать объект или экземпляр абстрактного класса. Абстрактные классы призваны предоставлять базовый функционал для классов-наследников. А производные классы уже реализуют этот функционал.</p>
+<p>При определении абстрактных классов используется ключевое слово <code>abstract</code>:</p>
+<pre><code class="language-java">public abstract class Human {
+
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+}
+</code></pre>
+<p>Но главное отличие состоит в том, что мы не можем использовать конструктор абстрактного класса для создания его объекта. Например, следующим образом:</p>
+<pre><code class="language-java">Human h = new Human();
+</code></pre>
+<p>Кроме обычных методов абстрактный класс может содержать абстрактные методы. Такие методы определяются с помощью ключевого слова <code>abstract</code> и не имеют никакой реализации:</p>
+<pre><code class="language-java">public abstract void display();
+</code></pre>
+<p>Производный класс обязан переопределить и реализовать все абстрактные методы, которые имеются в базовом абстрактном классе. Также следует учитывать, что если класс имеет хотя бы один абстрактный метод, то данный класс должен быть определен как абстрактный.</p>
+<p>Зачем нужны абстрактные классы? Допустим, мы делаем программу для обслуживания банковских операций и определяем в ней три класса: <code>Person</code>, который описывает человека, <code>Employee</code>, который описывает банковского служащего, и класс <code>Client</code>, который представляет клиента банка. Очевидно, что классы <code>Employee</code> и <code>Client</code> будут производными от класса <code>Person</code>, так как оба класса имеют некоторые общие поля и методы. И так как все объекты будут представлять либо сотрудника, либо клиента банка, то напрямую мы от класса <code>Person</code> создавать объекты не будем. Поэтому имеет смысл сделать его абстрактным.</p>
+<pre><code class="language-java">public class Program {
+
+    public static void main(String[] args) {
+        Employee sam = new Employee(&quot;Sam&quot;, &quot;Leman Brothers&quot;);
+        sam.display();
+        Client bob = new Client(&quot;Bob&quot;, &quot;Leman Brothers&quot;);
+        bob.display();
+    }
+}
+
+abstract class Person {
+
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public Person(String name) {
+        this.name = name;
+    }
+
+    public abstract void display();
+}
+
+class Employee extends Person {
+
+    private String bank;
+
+    public Employee(String name, String company) {
+        super(name);
+        this.bank = company;
+    }
+
+    public void display() {
+        System.out.printf(&quot;Employee Name: %s \t Bank: %s \n&quot;, super.getName(), bank);
+    }
+}
+
+class Client extends Person {
+
+    private String bank;
+
+    public Client(String name, String company) {
+        super(name);
+        this.bank = company;
+    }
+
+    public void display() {
+        System.out.printf(&quot;Client Name: %s \t Bank: %s \n&quot;, super.getName(), bank);
+    }
+}
+</code></pre>
+<p>Другим хрестоматийным примером является система геометрических фигур. В реальности не существует геометрической фигуры как таковой. Есть круг, прямоугольник, квадрат, но просто фигуры нет. Однако же и круг, и прямоугольник имеют что-то общее и являются фигурами:</p>
+<pre><code class="language-java">// абстрактный класс фигуры
+abstract class Figure {
+
+    float x; // x-координата точки
+    float y; // y-координата точки
+
+    Figure(float x, float y) {
+        this.x=x;
+        this.y=y;
+    }
+
+    // абстрактный метод для получения периметра
+    public abstract float getPerimeter();
+    // абстрактный метод для получения площади
+    public abstract float getArea();
+}
+
+// производный класс прямоугольника
+class Rectangle extends Figure {
+
+    private float width;
+    private float height;
+
+    // конструктор с обращением к конструктору класса Figure
+    Rectangle(float x, float y, float width, float height) {
+        super(x,y);
+        this.width = width;
+        this.height = height;
+    }
+
+    public float getPerimeter() {
+        return width * 2 + height * 2;
+    }
+
+    public float getArea() {
+        return width * height;
+    }
+}
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Drambluker" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
